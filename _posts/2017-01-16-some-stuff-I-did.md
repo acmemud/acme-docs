@@ -2,7 +2,7 @@
 publish: true
 layout: blog
 category: blog
-----
+---
 
 Some stuff I did:
 
