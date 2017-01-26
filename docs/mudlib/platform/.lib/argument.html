@@ -9,7 +9,7 @@
 </a><a href="#skip-navbar_top" title="Skip navigation links"></a><a name="navbar_">
 </a>
 <ul class="navList" title="Navigation">
-<div class="aboutLanguage"><em><strong>gabbo mudlib foundation<br/>version 0.1</strong></em></div>
+<div class="aboutLanguage"><em><strong>Acme MUD<br/>version 0.1</strong></em></div>
 </ul>
 </div>
 <div class="subNav">
@@ -63,8 +63,9 @@
 <dl>
 <dt>All Inherited Programs:</dt>
 <dd>
-<ul class="tree"><li><a href="../...html" title=""></a>
-</li><li class="last"><a href="../../platform/.lib/array.html" title="">ArrayLib </a>
+<ul class="tree"><li><a href="../../platform/.lib/string.html" title="">StringLib </a>&nbsp;[private]
+<ul class="tree"><li class="last"><a href="../../platform/.lib/array.html" title="">ArrayLib </a>&nbsp;[private]
+</li></ul></li><li class="last"><a href="../../platform/.lib/array.html" title="">ArrayLib </a>&nbsp;[private]
 </li></ul></dd>
 </dl>
 <hr>
@@ -94,33 +95,40 @@
 <th class="colLast" scope="col">Function and Description</th>
 </tr>
 <tr class="rowColor">
-<td class="colFirst"><code>public&nbsp;varargs&nbsp;string&nbsp;*</code></td>
+<td class="colFirst"><code>protected&nbsp;varargs&nbsp;string&nbsp;*</code></td>
 <td class="colLast"><code><strong><a href="../../platform/.lib/argument.html#explode_args()">explode_args</a></strong>(string&nbsp;arg,&nbsp;int&nbsp;preserve_quotes)</code>
 <div class="block">Separate space-deliniated arguments, but keep quoted strings together.</div>
 </td>
 </tr>
 <tr class="altColor">
-<td class="colFirst"><code>public&nbsp;varargs&nbsp;string&nbsp;*</code></td>
+<td class="colFirst"><code>protected&nbsp;varargs&nbsp;string&nbsp;*</code></td>
 <td class="colLast"><code><strong><a href="../../platform/.lib/argument.html#explode_nested()">explode_nested</a></strong>(string&nbsp;str,&nbsp;string&nbsp;delim,&nbsp;string&nbsp;open,&nbsp;string&nbsp;close)</code>
 <div class="block">Explode a string into substrings by a delimiter, ignoring any escaped
 delimiters, and delimiters nested within open/close characters.</div>
 </td>
 </tr>
 <tr class="rowColor">
-<td class="colFirst"><code>public&nbsp;string&nbsp;*</code></td>
+<td class="colFirst"><code>protected&nbsp;string&nbsp;*</code></td>
 <td class="colLast"><code><strong><a href="../../platform/.lib/argument.html#explode_unescaped()">explode_unescaped</a></strong>(string&nbsp;str,&nbsp;string&nbsp;delim)</code>
 <div class="block">Explode a string into substrings by a delimter, ignoring any escaped
 delimters in the string when performing the separation.</div>
 </td>
 </tr>
 <tr class="altColor">
-<td class="colFirst"><code>public&nbsp;varargs&nbsp;int&nbsp;</code></td>
+<td class="colFirst"><code>protected&nbsp;varargs&nbsp;int&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../platform/.lib/argument.html#find_close_char()">find_close_char</a></strong>(string&nbsp;str,&nbsp;int&nbsp;start,&nbsp;string&nbsp;open,&nbsp;string&nbsp;close)</code>
 <div class="block">Find closing brace/paren/bracket/quote in a string that matches a
 specified set of open characters.</div>
 </td>
 </tr>
 </table>
+<ul class="blockList">
+<li class="blockList"><a name="methods_inherited_from_class_/platform/.lib/string">
+</a>
+<h3>Functions inherited from program&nbsp;<a href="../../platform/.lib/string.html" title="program /platform/.lib/string">StringLib </a></h3>
+<code><a href="../../platform/.lib/string.html#crop_string()">crop_string</a>, <a href="../../platform/.lib/string.html#find_nonws()">find_nonws</a>, <a href="../../platform/.lib/string.html#is_escaped()">is_escaped</a>, <a href="../../platform/.lib/string.html#match_quote()">match_quote</a>, <a href="../../platform/.lib/string.html#search_str_unescaped()">search_str_unescaped</a>, <a href="../../platform/.lib/string.html#unescape()">unescape</a>, <a href="../../platform/.lib/string.html#unquote()">unquote</a></code></li>
+
+</ul>
 <ul class="blockList">
 <li class="blockList"><a name="methods_inherited_from_class_/platform/.lib/array">
 </a>
@@ -149,7 +157,7 @@ specified set of open characters.</div>
 <ul class="blockList">
 <li class="blockList">
 <h4>explode_args</h4>
-<pre>public&nbsp;varargs&nbsp;string&nbsp;*explode_args(string&nbsp;arg,&nbsp;int&nbsp;preserve_quotes)</pre>
+<pre>protected&nbsp;varargs&nbsp;string&nbsp;*explode_args(string&nbsp;arg,&nbsp;int&nbsp;preserve_quotes)</pre>
 <div class="block">Separate space-deliniated arguments, but keep quoted strings together.</div>
 <dl>
 <dl>
@@ -166,7 +174,7 @@ specified set of open characters.</div>
 <ul class="blockList">
 <li class="blockList">
 <h4>find_close_char</h4>
-<pre>public&nbsp;varargs&nbsp;int&nbsp;find_close_char(string&nbsp;str,&nbsp;int&nbsp;start,&nbsp;string&nbsp;open,&nbsp;string&nbsp;close)</pre>
+<pre>protected&nbsp;varargs&nbsp;int&nbsp;find_close_char(string&nbsp;str,&nbsp;int&nbsp;start,&nbsp;string&nbsp;open,&nbsp;string&nbsp;close)</pre>
 <div class="block">Find closing brace/paren/bracket/quote in a string that matches a
 specified set of open characters. The open and close strings must be the
 same legnth and in the correct order so that open[i] matches close[i].</div>
@@ -187,7 +195,7 @@ same legnth and in the correct order so that open[i] matches close[i].</div>
 <ul class="blockList">
 <li class="blockList">
 <h4>explode_unescaped</h4>
-<pre>public&nbsp;string&nbsp;*explode_unescaped(string&nbsp;str,&nbsp;string&nbsp;delim)</pre>
+<pre>protected&nbsp;string&nbsp;*explode_unescaped(string&nbsp;str,&nbsp;string&nbsp;delim)</pre>
 <div class="block">Explode a string into substrings by a delimter, ignoring any escaped
 delimters in the string when performing the separation. See is_escaped().</div>
 <dl>
@@ -205,7 +213,7 @@ delimters in the string when performing the separation. See is_escaped().</div>
 <ul class="blockList">
 <li class="blockList">
 <h4>explode_nested</h4>
-<pre>public&nbsp;varargs&nbsp;string&nbsp;*explode_nested(string&nbsp;str,&nbsp;string&nbsp;delim,&nbsp;string&nbsp;open,&nbsp;string&nbsp;close)</pre>
+<pre>protected&nbsp;varargs&nbsp;string&nbsp;*explode_nested(string&nbsp;str,&nbsp;string&nbsp;delim,&nbsp;string&nbsp;open,&nbsp;string&nbsp;close)</pre>
 <div class="block">Explode a string into substrings by a delimiter, ignoring any escaped
 delimiters, and delimiters nested within open/close characters. See
 explode_nested().</div>
@@ -235,7 +243,7 @@ explode_nested().</div>
 </a><a href="#skip-navbar_bottom" title="Skip navigation links"></a><a name="navbar_">
 </a>
 <ul class="navList" title="Navigation">
-<div class="aboutLanguage"><em><strong>gabbo mudlib foundation<br/>version 0.1</strong></em></div>
+<div class="aboutLanguage"><em><strong>Acme MUD<br/>version 0.1</strong></em></div>
 </ul>
 </div>
 <div class="subNav">

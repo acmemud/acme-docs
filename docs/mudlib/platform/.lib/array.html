@@ -9,7 +9,7 @@
 </a><a href="#skip-navbar_top" title="Skip navigation links"></a><a name="navbar_">
 </a>
 <ul class="navList" title="Navigation">
-<div class="aboutLanguage"><em><strong>gabbo mudlib foundation<br/>version 0.1</strong></em></div>
+<div class="aboutLanguage"><em><strong>Acme MUD<br/>version 0.1</strong></em></div>
 </ul>
 </div>
 <div class="subNav">
@@ -87,40 +87,40 @@
 <th class="colLast" scope="col">Function and Description</th>
 </tr>
 <tr class="rowColor">
-<td class="colFirst"><code>public&nbsp;varargs&nbsp;int&nbsp;</code></td>
+<td class="colFirst"><code>protected&nbsp;varargs&nbsp;int&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../platform/.lib/array.html#anti_searcha()">anti_searcha</a></strong>(mixed&nbsp;list,&nbsp;mixed&nbsp;el,&nbsp;int&nbsp;start,&nbsp;int&nbsp;step)</code>
 <div class="block">Return the index of the first element of an array or string which is not
 a specified value.</div>
 </td>
 </tr>
 <tr class="altColor">
-<td class="colFirst"><code>public&nbsp;varargs&nbsp;int&nbsp;</code></td>
+<td class="colFirst"><code>protected&nbsp;varargs&nbsp;int&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../platform/.lib/array.html#anti_searcha_any()">anti_searcha_any</a></strong>(mixed&nbsp;list,&nbsp;mixed&nbsp;elements,&nbsp;int&nbsp;start,&nbsp;int&nbsp;step)</code>
 <div class="block">Like anti_searcha(), but instead of searching for a single item, search
 for any item of a set.</div>
 </td>
 </tr>
 <tr class="rowColor">
-<td class="colFirst"><code>public&nbsp;mixed&nbsp;</code></td>
+<td class="colFirst"><code>protected&nbsp;mixed&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../platform/.lib/array.html#deep_flatten_array()">deep_flatten_array</a></strong>(mixed *list)</code>
 <div class="block">Completely flatten an array.</div>
 </td>
 </tr>
 <tr class="altColor">
-<td class="colFirst"><code>public&nbsp;mixed&nbsp;</code></td>
+<td class="colFirst"><code>protected&nbsp;mixed&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../platform/.lib/array.html#flatten_array()">flatten_array</a></strong>(mixed *list)</code>
 <div class="block">Flatten an array one level.</div>
 </td>
 </tr>
 <tr class="rowColor">
-<td class="colFirst"><code>public&nbsp;mixed&nbsp;*</code></td>
+<td class="colFirst"><code>protected&nbsp;mixed&nbsp;*</code></td>
 <td class="colLast"><code><strong><a href="../../platform/.lib/array.html#m_value()">m_value</a></strong>(mapping&nbsp;map,&nbsp;string&nbsp;k)</code>
 <div class="block">Return all the values associated with a mapping key in the form of an
 array.</div>
 </td>
 </tr>
 <tr class="altColor">
-<td class="colFirst"><code>public&nbsp;mapping&nbsp;*</code></td>
+<td class="colFirst"><code>protected&nbsp;mapping&nbsp;*</code></td>
 <td class="colLast"><code><strong><a href="../../platform/.lib/array.html#mapping_array()">mapping_array</a></strong>(mixed *keys,&nbsp;mixed *data)</code>
 <div class="block">Given an array of keys, create an array of mappings such that each element
 is a mapping with the specified keys and the correspecting values from
@@ -128,33 +128,33 @@ data[index].</div>
 </td>
 </tr>
 <tr class="rowColor">
-<td class="colFirst"><code>public&nbsp;mixed&nbsp;</code></td>
+<td class="colFirst"><code>protected&nbsp;mixed&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../platform/.lib/array.html#random_key()">random_key</a></strong>(mapping&nbsp;map)</code>
 <div class="block">Get a random key from a mapping.</div>
 </td>
 </tr>
 <tr class="altColor">
-<td class="colFirst"><code>public&nbsp;varargs&nbsp;mixed&nbsp;</code></td>
+<td class="colFirst"><code>protected&nbsp;varargs&nbsp;mixed&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../platform/.lib/array.html#reduce()">reduce</a></strong>(mixed&nbsp;data,&nbsp;closure&nbsp;reducer,&nbsp;mixed&nbsp;initial,&nbsp;varargs mixed *args)</code>
 <div class="block">Reduce an array or mapping.</div>
 </td>
 </tr>
 <tr class="rowColor">
-<td class="colFirst"><code>public&nbsp;varargs&nbsp;int&nbsp;</code></td>
+<td class="colFirst"><code>protected&nbsp;varargs&nbsp;int&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../platform/.lib/array.html#searcha()">searcha</a></strong>(mixed&nbsp;list,&nbsp;mixed&nbsp;el,&nbsp;int&nbsp;start,&nbsp;int&nbsp;step)</code>
 <div class="block">Return the index of the first element of an array or string which is a
 specified value.</div>
 </td>
 </tr>
 <tr class="altColor">
-<td class="colFirst"><code>public&nbsp;varargs&nbsp;int&nbsp;</code></td>
+<td class="colFirst"><code>protected&nbsp;varargs&nbsp;int&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../platform/.lib/array.html#searcha_any()">searcha_any</a></strong>(mixed&nbsp;list,&nbsp;mixed&nbsp;elements,&nbsp;int&nbsp;start,&nbsp;int&nbsp;step)</code>
 <div class="block">Like member(), but instead of searching for a single item, search for any
 item of a set.</div>
 </td>
 </tr>
 <tr class="rowColor">
-<td class="colFirst"><code>public&nbsp;varargs&nbsp;mixed&nbsp;*</code></td>
+<td class="colFirst"><code>protected&nbsp;varargs&nbsp;mixed&nbsp;*</code></td>
 <td class="colLast"><code><strong><a href="../../platform/.lib/array.html#unique_array()">unique_array</a></strong>(mixed *list,&nbsp;int&nbsp;keep_last)</code>
 <div class="block">Return a copy of an array with all duplicates removed.</div>
 </td>
@@ -181,7 +181,7 @@ item of a set.</div>
 <ul class="blockList">
 <li class="blockList">
 <h4>searcha</h4>
-<pre>public&nbsp;varargs&nbsp;int&nbsp;searcha(mixed&nbsp;list,&nbsp;mixed&nbsp;el,&nbsp;int&nbsp;start,&nbsp;int&nbsp;step)</pre>
+<pre>protected&nbsp;varargs&nbsp;int&nbsp;searcha(mixed&nbsp;list,&nbsp;mixed&nbsp;el,&nbsp;int&nbsp;start,&nbsp;int&nbsp;step)</pre>
 <div class="block">Return the index of the first element of an array or string which is a
 specified value. Like member(), but provides the start/step capability.</div>
 <dl>
@@ -201,7 +201,7 @@ specified value. Like member(), but provides the start/step capability.</div>
 <ul class="blockList">
 <li class="blockList">
 <h4>anti_searcha</h4>
-<pre>public&nbsp;varargs&nbsp;int&nbsp;anti_searcha(mixed&nbsp;list,&nbsp;mixed&nbsp;el,&nbsp;int&nbsp;start,&nbsp;int&nbsp;step)</pre>
+<pre>protected&nbsp;varargs&nbsp;int&nbsp;anti_searcha(mixed&nbsp;list,&nbsp;mixed&nbsp;el,&nbsp;int&nbsp;start,&nbsp;int&nbsp;step)</pre>
 <div class="block">Return the index of the first element of an array or string which is not
 a specified value.</div>
 <dl>
@@ -221,7 +221,7 @@ a specified value.</div>
 <ul class="blockList">
 <li class="blockList">
 <h4>searcha_any</h4>
-<pre>public&nbsp;varargs&nbsp;int&nbsp;searcha_any(mixed&nbsp;list,&nbsp;mixed&nbsp;elements,&nbsp;int&nbsp;start,&nbsp;int&nbsp;step)</pre>
+<pre>protected&nbsp;varargs&nbsp;int&nbsp;searcha_any(mixed&nbsp;list,&nbsp;mixed&nbsp;elements,&nbsp;int&nbsp;start,&nbsp;int&nbsp;step)</pre>
 <div class="block">Like member(), but instead of searching for a single item, search for any
 item of a set.</div>
 <dl>
@@ -241,7 +241,7 @@ item of a set.</div>
 <ul class="blockList">
 <li class="blockList">
 <h4>anti_searcha_any</h4>
-<pre>public&nbsp;varargs&nbsp;int&nbsp;anti_searcha_any(mixed&nbsp;list,&nbsp;mixed&nbsp;elements,&nbsp;int&nbsp;start,&nbsp;int&nbsp;step)</pre>
+<pre>protected&nbsp;varargs&nbsp;int&nbsp;anti_searcha_any(mixed&nbsp;list,&nbsp;mixed&nbsp;elements,&nbsp;int&nbsp;start,&nbsp;int&nbsp;step)</pre>
 <div class="block">Like anti_searcha(), but instead of searching for a single item, search
 for any item of a set.</div>
 <dl>
@@ -261,7 +261,7 @@ for any item of a set.</div>
 <ul class="blockList">
 <li class="blockList">
 <h4>unique_array</h4>
-<pre>public&nbsp;varargs&nbsp;mixed&nbsp;*unique_array(mixed *list,&nbsp;int&nbsp;keep_last)</pre>
+<pre>protected&nbsp;varargs&nbsp;mixed&nbsp;*unique_array(mixed *list,&nbsp;int&nbsp;keep_last)</pre>
 <div class="block">Return a copy of an array with all duplicates removed. When an element
 appears multiple times in the array, the first occurrence will be used for
 its position in the new array, unless keep_last!=0, in which case the last
@@ -284,7 +284,7 @@ using this function in favor of the more efficient:
 <ul class="blockList">
 <li class="blockList">
 <h4>flatten_array</h4>
-<pre>public&nbsp;mixed&nbsp;flatten_array(mixed *list)</pre>
+<pre>protected&nbsp;mixed&nbsp;flatten_array(mixed *list)</pre>
 <div class="block">Flatten an array one level. e.g. turns:
 <code>({ ({ a, b }), c, ({ d, ({ e }) }) })</code>
 into:
@@ -303,7 +303,7 @@ into:
 <ul class="blockList">
 <li class="blockList">
 <h4>deep_flatten_array</h4>
-<pre>public&nbsp;mixed&nbsp;deep_flatten_array(mixed *list)</pre>
+<pre>protected&nbsp;mixed&nbsp;deep_flatten_array(mixed *list)</pre>
 <div class="block">Completely flatten an array. e.g. turns:
 <code>({ ({ a, b }), c, ({ d, ({ e }) }) })</code>
 into:
@@ -322,7 +322,7 @@ into:
 <ul class="blockList">
 <li class="blockList">
 <h4>m_value</h4>
-<pre>public&nbsp;mixed&nbsp;*m_value(mapping&nbsp;map,&nbsp;string&nbsp;k)</pre>
+<pre>protected&nbsp;mixed&nbsp;*m_value(mapping&nbsp;map,&nbsp;string&nbsp;k)</pre>
 <div class="block">Return all the values associated with a mapping key in the form of an
 array. The resulting array will have the same width as the specified
 mapping.</div>
@@ -341,7 +341,7 @@ mapping.</div>
 <ul class="blockList">
 <li class="blockList">
 <h4>reduce</h4>
-<pre>public&nbsp;varargs&nbsp;mixed&nbsp;reduce(mixed&nbsp;data,&nbsp;closure&nbsp;reducer,&nbsp;mixed&nbsp;initial,&nbsp;varargs mixed *args)</pre>
+<pre>protected&nbsp;varargs&nbsp;mixed&nbsp;reduce(mixed&nbsp;data,&nbsp;closure&nbsp;reducer,&nbsp;mixed&nbsp;initial,&nbsp;varargs mixed *args)</pre>
 <div class="block">Reduce an array or mapping.</div>
 <dl>
 <dl>
@@ -360,7 +360,7 @@ mapping.</div>
 <ul class="blockList">
 <li class="blockList">
 <h4>mapping_array</h4>
-<pre>public&nbsp;mapping&nbsp;*mapping_array(mixed *keys,&nbsp;mixed *data)</pre>
+<pre>protected&nbsp;mapping&nbsp;*mapping_array(mixed *keys,&nbsp;mixed *data)</pre>
 <div class="block">Given an array of keys, create an array of mappings such that each element
 is a mapping with the specified keys and the correspecting values from
 data[index].</div>
@@ -379,7 +379,7 @@ data[index].</div>
 <ul class="blockList">
 <li class="blockList">
 <h4>random_key</h4>
-<pre>public&nbsp;mixed&nbsp;random_key(mapping&nbsp;map)</pre>
+<pre>protected&nbsp;mixed&nbsp;random_key(mapping&nbsp;map)</pre>
 <div class="block">Get a random key from a mapping.</div>
 <dl>
 <dl>
@@ -404,7 +404,7 @@ data[index].</div>
 </a><a href="#skip-navbar_bottom" title="Skip navigation links"></a><a name="navbar_">
 </a>
 <ul class="navList" title="Navigation">
-<div class="aboutLanguage"><em><strong>gabbo mudlib foundation<br/>version 0.1</strong></em></div>
+<div class="aboutLanguage"><em><strong>Acme MUD<br/>version 0.1</strong></em></div>
 </ul>
 </div>
 <div class="subNav">

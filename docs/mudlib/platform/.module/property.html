@@ -9,7 +9,7 @@
 </a><a href="#skip-navbar_top" title="Skip navigation links"></a><a name="navbar_">
 </a>
 <ul class="navList" title="Navigation">
-<div class="aboutLanguage"><em><strong>gabbo mudlib foundation<br/>version 0.1</strong></em></div>
+<div class="aboutLanguage"><em><strong>Acme MUD<br/>version 0.1</strong></em></div>
 </ul>
 </div>
 <div class="subNav">
@@ -63,7 +63,7 @@
 <dl>
 <dt>All Inherited Programs:</dt>
 <dd>
-<ul class="tree"><li class="last"><a href="../../platform/.lib/file.html" title="">FileLib </a>
+<ul class="tree"><li class="last"><a href="../../platform/.lib/file.html" title="">FileLib </a>&nbsp;[private]
 </li></ul></dd>
 </dl>
 <hr>
@@ -114,78 +114,84 @@ Hooks are specified as one of the following array formats:
 <th class="colFirst" scope="col">Modifier and Type</th>
 <th class="colLast" scope="col">Function and Description</th>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>public&nbsp;int&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../platform/.module/property.html#check_prop()">check_prop</a></strong>(string&nbsp;prop)</code>
 <div class="block">Test whether a property has been set, and query the property's flags.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>public&nbsp;varargs&nbsp;int&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../platform/.module/property.html#configure_prop()">configure_prop</a></strong>(string&nbsp;prop,&nbsp;int&nbsp;flags,&nbsp;mixed&nbsp;method)</code>
 <div class="block">Reconfigure a property that has already been initialized.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>public&nbsp;varargs&nbsp;string&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../platform/.module/property.html#default_prop_access()">default_prop_access</a></strong>(string&nbsp;prop,&nbsp;int&nbsp;op,&nbsp;object&nbsp;source,&nbsp;mixed&nbsp;special)</code>
 <div class="block">This function will be called for access checks against a prop that has not
 configured a valid access method.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>public&nbsp;varargs&nbsp;string&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../platform/.module/property.html#generate_unique_prop_name()">generate_unique_prop_name</a></strong>(string&nbsp;seed)</code>
 <div class="block">Utility function guaranteed to return a property name that is not already
 in use at the time the function is called.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>public&nbsp;varargs&nbsp;int&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../platform/.module/property.html#init_prop()">init_prop</a></strong>(string&nbsp;prop,&nbsp;int&nbsp;flags,&nbsp;mixed&nbsp;method)</code>
 <div class="block">Initialize a property with a specified configuration.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>public&nbsp;int&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../platform/.module/property.html#mask_prop()">mask_prop</a></strong>(string&nbsp;prop,&nbsp;mixed&nbsp;method)</code>
 <div class="block">Masks overload the result returned by the query_prop() function.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>public&nbsp;string&nbsp;*</code></td>
 <td class="colLast"><code><strong><a href="../../platform/.module/property.html#query_all_prop_names()">query_all_prop_names</a></strong>()</code>
 <div class="block">Get a list of all the properties on the object.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>public&nbsp;int&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../platform/.module/property.html#query_masking_prop()">query_masking_prop</a></strong>(string&nbsp;prop,&nbsp;mixed&nbsp;owner)</code>
 <div class="block">Test whether a specified object is currently masking a specified property.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>public&nbsp;mixed&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../platform/.module/property.html#query_prop()">query_prop</a></strong>(string&nbsp;prop)</code>
 <div class="block">Get the value of a property.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>public&nbsp;int&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../platform/.module/property.html#remove_prop()">remove_prop</a></strong>(string&nbsp;prop)</code>
 <div class="block">Completely remove a property from an object.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>public&nbsp;int&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../platform/.module/property.html#set_prop()">set_prop</a></strong>(string&nbsp;prop,&nbsp;mixed&nbsp;value)</code>
 <div class="block">Set the value of a property.</div>
 </td>
 </tr>
-<tr class="rowColor">
-<td class="colFirst"><code>protected&nbsp;void&nbsp;</code></td>
+<tr class="altColor">
+<td class="colFirst"><code>public&nbsp;void&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../platform/.module/property.html#setup()">setup</a></strong>()</code>
 <div class="block">Initialize PropertyMixin.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>public&nbsp;void&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../platform/.module/property.html#teardown()">teardown</a></strong>()</code>
+<div class="block">Tear down PropertyMixin.</div>
 </td>
 </tr>
 <tr class="altColor">
@@ -223,8 +229,21 @@ in use at the time the function is called.</div>
 <ul class="blockList">
 <li class="blockList">
 <h4>setup</h4>
-<pre>protected&nbsp;void&nbsp;setup()</pre>
+<pre>public&nbsp;void&nbsp;setup()</pre>
 <div class="block">Initialize PropertyMixin.</div>
+<dl>
+<dl>
+</dl>
+</li>
+</ul>
+<a name="teardown()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>teardown</h4>
+<pre>public&nbsp;void&nbsp;teardown()</pre>
+<div class="block">Tear down PropertyMixin.</div>
 <dl>
 <dl>
 </dl>
@@ -461,7 +480,7 @@ configured a valid access method. See check_access().</div>
 </a><a href="#skip-navbar_bottom" title="Skip navigation links"></a><a name="navbar_">
 </a>
 <ul class="navList" title="Navigation">
-<div class="aboutLanguage"><em><strong>gabbo mudlib foundation<br/>version 0.1</strong></em></div>
+<div class="aboutLanguage"><em><strong>Acme MUD<br/>version 0.1</strong></em></div>
 </ul>
 </div>
 <div class="subNav">

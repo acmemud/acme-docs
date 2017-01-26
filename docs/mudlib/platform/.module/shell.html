@@ -9,7 +9,7 @@
 </a><a href="#skip-navbar_top" title="Skip navigation links"></a><a name="navbar_">
 </a>
 <ul class="navList" title="Navigation">
-<div class="aboutLanguage"><em><strong>gabbo mudlib foundation<br/>version 0.1</strong></em></div>
+<div class="aboutLanguage"><em><strong>Acme MUD<br/>version 0.1</strong></em></div>
 </ul>
 </div>
 <div class="subNav">
@@ -63,7 +63,7 @@
 <dl>
 <dt>All Inherited Programs:</dt>
 <dd>
-<ul class="tree"><li class="last"><a href="../../platform/.lib/file.html" title="">FileLib </a>
+<ul class="tree"><li class="last"><a href="../../platform/.lib/file.html" title="">FileLib </a>&nbsp;[private]
 </li></ul></dd>
 </dl>
 <hr>
@@ -92,10 +92,16 @@
 <th class="colFirst" scope="col">Modifier and Type</th>
 <th class="colLast" scope="col">Function and Description</th>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>public&nbsp;void&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../platform/.module/shell.html#clear_dirs()">clear_dirs</a></strong>()</code>
 <div class="block"></div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>public&nbsp;int&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../platform/.module/shell.html#has_shell()">has_shell</a></strong>()</code>
+<div class="block">Return true to indicate the user has a shell.</div>
 </td>
 </tr>
 <tr class="rowColor">
@@ -154,9 +160,15 @@ added directory.</div>
 </td>
 </tr>
 <tr class="altColor">
-<td class="colFirst"><code>protected&nbsp;void&nbsp;</code></td>
+<td class="colFirst"><code>public&nbsp;void&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../platform/.module/shell.html#setup()">setup</a></strong>()</code>
 <div class="block">Setup the ShellMixin.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>public&nbsp;void&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../platform/.module/shell.html#teardown()">teardown</a></strong>()</code>
+<div class="block">Tear down the ShellMixin.</div>
 </td>
 </tr>
 </table>
@@ -188,10 +200,37 @@ added directory.</div>
 <ul class="blockList">
 <li class="blockList">
 <h4>setup</h4>
-<pre>protected&nbsp;void&nbsp;setup()</pre>
+<pre>public&nbsp;void&nbsp;setup()</pre>
 <div class="block">Setup the ShellMixin.</div>
 <dl>
 <dl>
+</dl>
+</li>
+</ul>
+<a name="teardown()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>teardown</h4>
+<pre>public&nbsp;void&nbsp;teardown()</pre>
+<div class="block">Tear down the ShellMixin.</div>
+<dl>
+<dl>
+</dl>
+</li>
+</ul>
+<a name="has_shell()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>has_shell</h4>
+<pre>public&nbsp;int&nbsp;has_shell()</pre>
+<div class="block">Return true to indicate the user has a shell.</div>
+<dl>
+<dl>
+<dt><span class="strong">Returns:</span></dt><dd>1 </dd>
 </dl>
 </li>
 </ul>
@@ -307,8 +346,7 @@ added directory.</div>
 <dl>
 <dl>
 <dt><span class="strong">Parameters:</span></dt>
-<dd><code>dir</code> - the directory to set </dd>
-<dt><span class="strong">Returns:</span></dt><dd>0 for failure, 1 for success </dd>
+<dd><code>dir</code> - the directory to set - * @return     0 for failure, 1 for success </dd>
 </dl>
 </li>
 </ul>
@@ -357,7 +395,7 @@ added directory.</div>
 </a><a href="#skip-navbar_bottom" title="Skip navigation links"></a><a name="navbar_">
 </a>
 <ul class="navList" title="Navigation">
-<div class="aboutLanguage"><em><strong>gabbo mudlib foundation<br/>version 0.1</strong></em></div>
+<div class="aboutLanguage"><em><strong>Acme MUD<br/>version 0.1</strong></em></div>
 </ul>
 </div>
 <div class="subNav">

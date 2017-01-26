@@ -9,7 +9,7 @@
 </a><a href="#skip-navbar_top" title="Skip navigation links"></a><a name="navbar_">
 </a>
 <ul class="navList" title="Navigation">
-<div class="aboutLanguage"><em><strong>gabbo mudlib foundation<br/>version 0.1</strong></em></div>
+<div class="aboutLanguage"><em><strong>Acme MUD<br/>version 0.1</strong></em></div>
 </ul>
 </div>
 <div class="subNav">
@@ -60,6 +60,12 @@
 <div class="description">
 <ul class="blockList">
 <li class="blockList">
+<dl>
+<dt>All Inherited Programs:</dt>
+<dd>
+<ul class="tree"><li class="last"><a href="../../platform/.lib/access.html" title="">AccessLib </a>&nbsp;[private]
+</li></ul></dd>
+</dl>
 <hr>
 <br>
 <div class="block">Utility library for dealing with objects of all types.</div>
@@ -87,24 +93,31 @@
 <th class="colLast" scope="col">Function and Description</th>
 </tr>
 <tr class="rowColor">
-<td class="colFirst"><code>public&nbsp;mixed&nbsp;*</code></td>
+<td class="colFirst"><code>protected&nbsp;mixed&nbsp;*</code></td>
 <td class="colLast"><code><strong><a href="../../platform/.lib/object.html#get_path_info()">get_path_info</a></strong>(mixed&nbsp;ob)</code>
 <div class="block">Get various info about an object based on its path.</div>
 </td>
 </tr>
 <tr class="altColor">
-<td class="colFirst"><code>public&nbsp;varargs&nbsp;int&nbsp;</code></td>
+<td class="colFirst"><code>protected&nbsp;varargs&nbsp;int&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../platform/.lib/object.html#is_reachable()">is_reachable</a></strong>(object&nbsp;ob,&nbsp;object&nbsp;who)</code>
 <div class="block">Test whether an object is reachable from another object.</div>
 </td>
 </tr>
 <tr class="rowColor">
-<td class="colFirst"><code>public&nbsp;varargs&nbsp;object&nbsp;</code></td>
+<td class="colFirst"><code>protected&nbsp;varargs&nbsp;object&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../platform/.lib/object.html#reload_object()">reload_object</a></strong>(mixed&nbsp;ob,&nbsp;int&nbsp;flags)</code>
 <div class="block">Reload an object.</div>
 </td>
 </tr>
 </table>
+<ul class="blockList">
+<li class="blockList"><a name="methods_inherited_from_class_/platform/.lib/access">
+</a>
+<h3>Functions inherited from program&nbsp;<a href="../../platform/.lib/access.html" title="program /platform/.lib/access">AccessLib </a></h3>
+<code><a href="../../platform/.lib/access.html#get_create_uid()">get_create_uid</a>, <a href="../../platform/.lib/access.html#get_user()">get_user</a></code></li>
+
+</ul>
 
 </li>
 </ul>
@@ -126,7 +139,7 @@
 <ul class="blockList">
 <li class="blockList">
 <h4>is_reachable</h4>
-<pre>public&nbsp;varargs&nbsp;int&nbsp;is_reachable(object&nbsp;ob,&nbsp;object&nbsp;who)</pre>
+<pre>protected&nbsp;varargs&nbsp;int&nbsp;is_reachable(object&nbsp;ob,&nbsp;object&nbsp;who)</pre>
 <div class="block">Test whether an object is reachable from another object.
 TODO This doesn't belong here, the name sucks. Maybe is_present(), and we
 expand the definition of "present" (i.e. reimplement present()) to include
@@ -148,7 +161,7 @@ really matters is what needs to happen in ObjectExpansionLib.</div>
 <ul class="blockList">
 <li class="blockList">
 <h4>get_path_info</h4>
-<pre>public&nbsp;mixed&nbsp;*get_path_info(mixed&nbsp;ob)</pre>
+<pre>protected&nbsp;mixed&nbsp;*get_path_info(mixed&nbsp;ob)</pre>
 <div class="block">Get various info about an object based on its path.</div>
 <dl>
 <dl>
@@ -164,7 +177,7 @@ really matters is what needs to happen in ObjectExpansionLib.</div>
 <ul class="blockList">
 <li class="blockList">
 <h4>reload_object</h4>
-<pre>public&nbsp;varargs&nbsp;object&nbsp;reload_object(mixed&nbsp;ob,&nbsp;int&nbsp;flags)</pre>
+<pre>protected&nbsp;varargs&nbsp;object&nbsp;reload_object(mixed&nbsp;ob,&nbsp;int&nbsp;flags)</pre>
 <div class="block">Reload an object. Depending on the flags being used, this function will
 destruct an object and then recreate, attempting to restore as much of the
 original object's state as possible.</div>
@@ -192,7 +205,7 @@ original object's state as possible.</div>
 </a><a href="#skip-navbar_bottom" title="Skip navigation links"></a><a name="navbar_">
 </a>
 <ul class="navList" title="Navigation">
-<div class="aboutLanguage"><em><strong>gabbo mudlib foundation<br/>version 0.1</strong></em></div>
+<div class="aboutLanguage"><em><strong>Acme MUD<br/>version 0.1</strong></em></div>
 </ul>
 </div>
 <div class="subNav">

@@ -9,7 +9,7 @@
 </a><a href="#skip-navbar_top" title="Skip navigation links"></a><a name="navbar_">
 </a>
 <ul class="navList" title="Navigation">
-<div class="aboutLanguage"><em><strong>gabbo mudlib foundation<br/>version 0.1</strong></em></div>
+<div class="aboutLanguage"><em><strong>Acme MUD<br/>version 0.1</strong></em></div>
 </ul>
 </div>
 <div class="subNav">
@@ -63,8 +63,9 @@
 <dl>
 <dt>All Inherited Programs:</dt>
 <dd>
-<ul class="tree"><li class="last"><a href="../../platform/.lib/object.html" title="">ObjectLib </a>
-</li></ul></dd>
+<ul class="tree"><li class="last"><a href="../../platform/.lib/object.html" title="">ObjectLib </a>&nbsp;[private]
+<ul class="tree"><li class="last"><a href="../../platform/.lib/access.html" title="">AccessLib </a>&nbsp;[private]
+</li></ul></li></ul></dd>
 </dl>
 <hr>
 <br>
@@ -93,19 +94,19 @@
 <th class="colLast" scope="col">Function and Description</th>
 </tr>
 <tr class="rowColor">
-<td class="colFirst"><code>public&nbsp;string&nbsp;</code></td>
+<td class="colFirst"><code>protected&nbsp;string&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../platform/.lib/zone.html#get_parent_zone()">get_parent_zone</a></strong>(string&nbsp;zone_id)</code>
 <div class="block">Get the parent zone id of a given zone id.</div>
 </td>
 </tr>
 <tr class="altColor">
-<td class="colFirst"><code>public&nbsp;string&nbsp;</code></td>
+<td class="colFirst"><code>protected&nbsp;string&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../platform/.lib/zone.html#get_zone()">get_zone</a></strong>(object&nbsp;ob)</code>
 <div class="block">Get the zone an object belongs to.</div>
 </td>
 </tr>
 <tr class="rowColor">
-<td class="colFirst"><code>public&nbsp;int&nbsp;</code></td>
+<td class="colFirst"><code>protected&nbsp;int&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../platform/.lib/zone.html#valid_zone_id()">valid_zone_id</a></strong>(string&nbsp;zone_id)</code>
 <div class="block">Test whether a zone id is valid.</div>
 </td>
@@ -116,6 +117,13 @@
 </a>
 <h3>Functions inherited from program&nbsp;<a href="../../platform/.lib/object.html" title="program /platform/.lib/object">ObjectLib </a></h3>
 <code><a href="../../platform/.lib/object.html#get_path_info()">get_path_info</a>, <a href="../../platform/.lib/object.html#is_reachable()">is_reachable</a>, <a href="../../platform/.lib/object.html#reload_object()">reload_object</a></code></li>
+
+</ul>
+<ul class="blockList">
+<li class="blockList"><a name="methods_inherited_from_class_/platform/.lib/access">
+</a>
+<h3>Functions inherited from program&nbsp;<a href="../../platform/.lib/access.html" title="program /platform/.lib/access">AccessLib </a></h3>
+<code><a href="../../platform/.lib/access.html#get_create_uid()">get_create_uid</a>, <a href="../../platform/.lib/access.html#get_user()">get_user</a></code></li>
 
 </ul>
 
@@ -139,7 +147,7 @@
 <ul class="blockList">
 <li class="blockList">
 <h4>valid_zone_id</h4>
-<pre>public&nbsp;int&nbsp;valid_zone_id(string&nbsp;zone_id)</pre>
+<pre>protected&nbsp;int&nbsp;valid_zone_id(string&nbsp;zone_id)</pre>
 <div class="block">Test whether a zone id is valid.</div>
 <dl>
 <dl>
@@ -155,7 +163,7 @@
 <ul class="blockList">
 <li class="blockList">
 <h4>get_parent_zone</h4>
-<pre>public&nbsp;string&nbsp;get_parent_zone(string&nbsp;zone_id)</pre>
+<pre>protected&nbsp;string&nbsp;get_parent_zone(string&nbsp;zone_id)</pre>
 <div class="block">Get the parent zone id of a given zone id.</div>
 <dl>
 <dl>
@@ -171,7 +179,7 @@
 <ul class="blockList">
 <li class="blockList">
 <h4>get_zone</h4>
-<pre>public&nbsp;string&nbsp;get_zone(object&nbsp;ob)</pre>
+<pre>protected&nbsp;string&nbsp;get_zone(object&nbsp;ob)</pre>
 <div class="block">Get the zone an object belongs to.</div>
 <dl>
 <dl>
@@ -196,7 +204,7 @@
 </a><a href="#skip-navbar_bottom" title="Skip navigation links"></a><a name="navbar_">
 </a>
 <ul class="navList" title="Navigation">
-<div class="aboutLanguage"><em><strong>gabbo mudlib foundation<br/>version 0.1</strong></em></div>
+<div class="aboutLanguage"><em><strong>Acme MUD<br/>version 0.1</strong></em></div>
 </ul>
 </div>
 <div class="subNav">

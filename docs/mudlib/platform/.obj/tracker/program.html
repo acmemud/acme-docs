@@ -9,7 +9,7 @@
 </a><a href="#skip-navbar_top" title="Skip navigation links"></a><a name="navbar_">
 </a>
 <ul class="navList" title="Navigation">
-<div class="aboutLanguage"><em><strong>gabbo mudlib foundation<br/>version 0.1</strong></em></div>
+<div class="aboutLanguage"><em><strong>Acme MUD<br/>version 0.1</strong></em></div>
 </ul>
 </div>
 <div class="subNav">
@@ -64,7 +64,8 @@
 <dt>All Inherited Programs:</dt>
 <dd>
 <ul class="tree"><li><a href="../../../platform/.module/sql.html" title="">SqlMixin </a>
-</li><li class="last"><a href="../../../platform/.lib/program.html" title="">ProgramLib </a>
+</li><li><a href="../../../platform/.lib/program.html" title="">ProgramLib </a>&nbsp;[private]
+</li><li class="last"><a href="../../../platform/.lib/array.html" title="">ArrayLib </a>&nbsp;[private]
 </li></ul></dd>
 </dl>
 <hr>
@@ -81,23 +82,6 @@
 <div class="summary">
 <ul class="blockList">
 <li class="blockList">
-<!-- =========== FIELD SUMMARY =========== -->
-<ul class="blockList">
-<li class="blockList"><a name="field_summary">
-<!--   -->
-</a>
-<h3>Variable Summary</h3>
-<ul class="blockList">
-
-<li class="blockList"><a name="fields_inherited_from_class_/platform/.module/sql">
-</a>
-<h3>Variables inherited from program&nbsp;<a href="../../../platform/.module/sql.html" title="program /platform/.module/sql">SqlMixin </a></h3>
-<code><a href="../../../platform/.module/sql.html#database">database</a></code></li>
-
-</ul>
-
-</li>
-</ul>
 <!-- ========== METHOD SUMMARY =========== -->
 <ul class="blockList">
 <li class="blockList"><a name="method_summary">
@@ -117,7 +101,7 @@
 </td>
 </tr>
 <tr class="rowColor">
-<td class="colFirst"><code>public&nbsp;string&nbsp;</code></td>
+<td class="colFirst"><code>protected&nbsp;string&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../../platform/.obj/tracker/program.html#get_id()">get_id</a></strong>(string&nbsp;program_name,&nbsp;int&nbsp;program_time,&nbsp;int&nbsp;program_count)</code>
 <div class="block">Get a program id its constitutent components.</div>
 </td>
@@ -165,7 +149,7 @@
 </td>
 </tr>
 <tr class="rowColor">
-<td class="colFirst"><code>protected&nbsp;void&nbsp;</code></td>
+<td class="colFirst"><code>public&nbsp;void&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../../platform/.obj/tracker/program.html#setup()">setup</a></strong>()</code>
 <div class="block">Setup the ProgramTracker.</div>
 </td>
@@ -175,7 +159,14 @@
 <li class="blockList"><a name="methods_inherited_from_class_/platform/.module/sql">
 </a>
 <h3>Functions inherited from program&nbsp;<a href="../../../platform/.module/sql.html" title="program /platform/.module/sql">SqlMixin </a></h3>
-<code><a href="../../../platform/.module/sql.html#create_table()">create_table</a>, <a href="../../../platform/.module/sql.html#insert()">insert</a>, <a href="../../../platform/.module/sql.html#query_database()">query_database</a>, <a href="../../../platform/.module/sql.html#select()">select</a>, <a href="../../../platform/.module/sql.html#set_database()">set_database</a>, <a href="../../../platform/.module/sql.html#setup()">setup</a>, <a href="../../../platform/.module/sql.html#table_info()">table_info</a>, <a href="../../../platform/.module/sql.html#update()">update</a></code></li>
+<code><a href="../../../platform/.module/sql.html#create_table()">create_table</a>, <a href="../../../platform/.module/sql.html#has_sql()">has_sql</a>, <a href="../../../platform/.module/sql.html#insert()">insert</a>, <a href="../../../platform/.module/sql.html#query_database()">query_database</a>, <a href="../../../platform/.module/sql.html#select()">select</a>, <a href="../../../platform/.module/sql.html#set_database()">set_database</a>, <a href="../../../platform/.module/sql.html#setup()">setup</a>, <a href="../../../platform/.module/sql.html#table_info()">table_info</a>, <a href="../../../platform/.module/sql.html#teardown()">teardown</a>, <a href="../../../platform/.module/sql.html#update()">update</a></code></li>
+
+</ul>
+<ul class="blockList">
+<li class="blockList"><a name="methods_inherited_from_class_/platform/.lib/array">
+</a>
+<h3>Functions inherited from program&nbsp;<a href="../../../platform/.lib/array.html" title="program /platform/.lib/array">ArrayLib </a></h3>
+<code><a href="../../../platform/.lib/array.html#anti_searcha()">anti_searcha</a>, <a href="../../../platform/.lib/array.html#anti_searcha_any()">anti_searcha_any</a>, <a href="../../../platform/.lib/array.html#deep_flatten_array()">deep_flatten_array</a>, <a href="../../../platform/.lib/array.html#flatten_array()">flatten_array</a>, <a href="../../../platform/.lib/array.html#m_value()">m_value</a>, <a href="../../../platform/.lib/array.html#mapping_array()">mapping_array</a>, <a href="../../../platform/.lib/array.html#random_key()">random_key</a>, <a href="../../../platform/.lib/array.html#reduce()">reduce</a>, <a href="../../../platform/.lib/array.html#searcha()">searcha</a>, <a href="../../../platform/.lib/array.html#searcha_any()">searcha_any</a>, <a href="../../../platform/.lib/array.html#unique_array()">unique_array</a></code></li>
 
 </ul>
 
@@ -199,7 +190,7 @@
 <ul class="blockList">
 <li class="blockList">
 <h4>setup</h4>
-<pre>protected&nbsp;void&nbsp;setup()</pre>
+<pre>public&nbsp;void&nbsp;setup()</pre>
 <div class="block">Setup the ProgramTracker.</div>
 <dl>
 <dl>
@@ -212,7 +203,7 @@
 <ul class="blockList">
 <li class="blockList">
 <h4>get_id</h4>
-<pre>public&nbsp;string&nbsp;get_id(string&nbsp;program_name,&nbsp;int&nbsp;program_time,&nbsp;int&nbsp;program_count)</pre>
+<pre>protected&nbsp;string&nbsp;get_id(string&nbsp;program_name,&nbsp;int&nbsp;program_time,&nbsp;int&nbsp;program_count)</pre>
 <div class="block">Get a program id its constitutent components.</div>
 <dl>
 <dl>
@@ -362,7 +353,7 @@
 </a><a href="#skip-navbar_bottom" title="Skip navigation links"></a><a name="navbar_">
 </a>
 <ul class="navList" title="Navigation">
-<div class="aboutLanguage"><em><strong>gabbo mudlib foundation<br/>version 0.1</strong></em></div>
+<div class="aboutLanguage"><em><strong>Acme MUD<br/>version 0.1</strong></em></div>
 </ul>
 </div>
 <div class="subNav">

@@ -9,7 +9,7 @@
 </a><a href="#skip-navbar_top" title="Skip navigation links"></a><a name="navbar_">
 </a>
 <ul class="navList" title="Navigation">
-<div class="aboutLanguage"><em><strong>gabbo mudlib foundation<br/>version 0.1</strong></em></div>
+<div class="aboutLanguage"><em><strong>Acme MUD<br/>version 0.1</strong></em></div>
 </ul>
 </div>
 <div class="subNav">
@@ -87,80 +87,80 @@
 <th class="colLast" scope="col">Function and Description</th>
 </tr>
 <tr class="rowColor">
-<td class="colFirst"><code>public&nbsp;string&nbsp;</code></td>
+<td class="colFirst"><code>protected&nbsp;string&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../platform/.lib/file.html#basename()">basename</a></strong>(string&nbsp;filename)</code>
 <div class="block">Return the filename component of a complete path.</div>
 </td>
 </tr>
 <tr class="altColor">
-<td class="colFirst"><code>public&nbsp;int&nbsp;</code></td>
+<td class="colFirst"><code>protected&nbsp;int&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../platform/.lib/file.html#copy_tree()">copy_tree</a></strong>(string&nbsp;src,&nbsp;string&nbsp;dest)</code>
 <div class="block">Recursively copy files and directories.</div>
 </td>
 </tr>
 <tr class="rowColor">
-<td class="colFirst"><code>public&nbsp;string&nbsp;</code></td>
+<td class="colFirst"><code>protected&nbsp;string&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../platform/.lib/file.html#dirname()">dirname</a></strong>(string&nbsp;filename)</code>
 <div class="block">Return the name of a file's containing directory.</div>
 </td>
 </tr>
 <tr class="altColor">
-<td class="colFirst"><code>public&nbsp;varargs&nbsp;string&nbsp;</code></td>
+<td class="colFirst"><code>protected&nbsp;varargs&nbsp;string&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../platform/.lib/file.html#expand_path()">expand_path</a></strong>(string&nbsp;pattern,&nbsp;mixed&nbsp;rel)</code>
 <div class="block">Returns the absolute filename of the possibly relative filename described
 by pattern.</div>
 </td>
 </tr>
 <tr class="rowColor">
-<td class="colFirst"><code>public&nbsp;varargs&nbsp;mixed&nbsp;*</code></td>
+<td class="colFirst"><code>protected&nbsp;varargs&nbsp;mixed&nbsp;*</code></td>
 <td class="colLast"><code><strong><a href="../../platform/.lib/file.html#expand_pattern()">expand_pattern</a></strong>(string&nbsp;pattern,&nbsp;object&nbsp;rel)</code>
 <div class="block">Resolve a file pattern containing possible wildcards.</div>
 </td>
 </tr>
 <tr class="altColor">
-<td class="colFirst"><code>public&nbsp;int&nbsp;</code></td>
+<td class="colFirst"><code>protected&nbsp;int&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../platform/.lib/file.html#file_exists()">file_exists</a></strong>(string&nbsp;filename)</code>
 <div class="block">Test whether a file exists.</div>
 </td>
 </tr>
 <tr class="rowColor">
-<td class="colFirst"><code>public&nbsp;int&nbsp;</code></td>
+<td class="colFirst"><code>protected&nbsp;int&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../platform/.lib/file.html#is_directory()">is_directory</a></strong>(string&nbsp;filename)</code>
 <div class="block">Test whether a path is a directory.</div>
 </td>
 </tr>
 <tr class="altColor">
-<td class="colFirst"><code>public&nbsp;int&nbsp;</code></td>
+<td class="colFirst"><code>protected&nbsp;int&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../platform/.lib/file.html#is_loadable()">is_loadable</a></strong>(string&nbsp;file)</code>
 <div class="block">Return true if a file can be loaded (ends in .c basically).</div>
 </td>
 </tr>
 <tr class="rowColor">
-<td class="colFirst"><code>public&nbsp;int&nbsp;</code></td>
+<td class="colFirst"><code>protected&nbsp;int&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../platform/.lib/file.html#is_special_dir()">is_special_dir</a></strong>(string&nbsp;path)</code>
 <div class="block">Returns 1 if a path represents a "." or ".." directory.</div>
 </td>
 </tr>
 <tr class="altColor">
-<td class="colFirst"><code>public&nbsp;string&nbsp;</code></td>
+<td class="colFirst"><code>protected&nbsp;string&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../platform/.lib/file.html#munge_filename()">munge_filename</a></strong>(string&nbsp;filename)</code>
 <div class="block">Munges a filename into a standard format.</div>
 </td>
 </tr>
 <tr class="rowColor">
-<td class="colFirst"><code>public&nbsp;mixed&nbsp;</code></td>
+<td class="colFirst"><code>protected&nbsp;mixed&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../platform/.lib/file.html#read_value()">read_value</a></strong>(string&nbsp;file)</code>
 <div class="block">Restore a value from a .val file.</div>
 </td>
 </tr>
 <tr class="altColor">
-<td class="colFirst"><code>public&nbsp;int&nbsp;</code></td>
+<td class="colFirst"><code>protected&nbsp;int&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../platform/.lib/file.html#traverse_tree()">traverse_tree</a></strong>(string&nbsp;root,&nbsp;closure&nbsp;callback,&nbsp;varargs mixed *args)</code>
 <div class="block">Traverse a directory tree.</div>
 </td>
 </tr>
 <tr class="rowColor">
-<td class="colFirst"><code>public&nbsp;int&nbsp;</code></td>
+<td class="colFirst"><code>protected&nbsp;int&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../platform/.lib/file.html#write_value()">write_value</a></strong>(string&nbsp;file,&nbsp;mixed&nbsp;value)</code>
 <div class="block">Save a value to a .val file.</div>
 </td>
@@ -187,7 +187,7 @@ by pattern.</div>
 <ul class="blockList">
 <li class="blockList">
 <h4>file_exists</h4>
-<pre>public&nbsp;int&nbsp;file_exists(string&nbsp;filename)</pre>
+<pre>protected&nbsp;int&nbsp;file_exists(string&nbsp;filename)</pre>
 <div class="block">Test whether a file exists.</div>
 <dl>
 <dl>
@@ -203,7 +203,7 @@ by pattern.</div>
 <ul class="blockList">
 <li class="blockList">
 <h4>is_directory</h4>
-<pre>public&nbsp;int&nbsp;is_directory(string&nbsp;filename)</pre>
+<pre>protected&nbsp;int&nbsp;is_directory(string&nbsp;filename)</pre>
 <div class="block">Test whether a path is a directory.</div>
 <dl>
 <dl>
@@ -219,7 +219,7 @@ by pattern.</div>
 <ul class="blockList">
 <li class="blockList">
 <h4>basename</h4>
-<pre>public&nbsp;string&nbsp;basename(string&nbsp;filename)</pre>
+<pre>protected&nbsp;string&nbsp;basename(string&nbsp;filename)</pre>
 <div class="block">Return the filename component of a complete path.</div>
 <dl>
 <dl>
@@ -235,7 +235,7 @@ by pattern.</div>
 <ul class="blockList">
 <li class="blockList">
 <h4>dirname</h4>
-<pre>public&nbsp;string&nbsp;dirname(string&nbsp;filename)</pre>
+<pre>protected&nbsp;string&nbsp;dirname(string&nbsp;filename)</pre>
 <div class="block">Return the name of a file's containing directory.</div>
 <dl>
 <dl>
@@ -251,7 +251,7 @@ by pattern.</div>
 <ul class="blockList">
 <li class="blockList">
 <h4>munge_filename</h4>
-<pre>public&nbsp;string&nbsp;munge_filename(string&nbsp;filename)</pre>
+<pre>protected&nbsp;string&nbsp;munge_filename(string&nbsp;filename)</pre>
 <div class="block">Munges a filename into a standard format.</div>
 <dl>
 <dl>
@@ -267,7 +267,7 @@ by pattern.</div>
 <ul class="blockList">
 <li class="blockList">
 <h4>expand_path</h4>
-<pre>public&nbsp;varargs&nbsp;string&nbsp;expand_path(string&nbsp;pattern,&nbsp;mixed&nbsp;rel)</pre>
+<pre>protected&nbsp;varargs&nbsp;string&nbsp;expand_path(string&nbsp;pattern,&nbsp;mixed&nbsp;rel)</pre>
 <div class="block">Returns the absolute filename of the possibly relative filename described
 by pattern.  Relative paths will be resolved according to rel if rel is a
 string, otherwise rel->query_pwd(), or dirname(object_name(rel)) if 'rel'
@@ -288,7 +288,7 @@ directories specified with '~' will also be resolved according to 'rel'.</div>
 <ul class="blockList">
 <li class="blockList">
 <h4>expand_pattern</h4>
-<pre>public&nbsp;varargs&nbsp;mixed&nbsp;*expand_pattern(string&nbsp;pattern,&nbsp;object&nbsp;rel)</pre>
+<pre>protected&nbsp;varargs&nbsp;mixed&nbsp;*expand_pattern(string&nbsp;pattern,&nbsp;object&nbsp;rel)</pre>
 <div class="block">Resolve a file pattern containing possible wildcards. Wildcards may be
 expressed as a '*' or '?' as specified by get_dir(E). Wildcard characters
 in the middle of the path will be expanded in place (e.g.
@@ -308,7 +308,7 @@ in the middle of the path will be expanded in place (e.g.
 <ul class="blockList">
 <li class="blockList">
 <h4>is_loadable</h4>
-<pre>public&nbsp;int&nbsp;is_loadable(string&nbsp;file)</pre>
+<pre>protected&nbsp;int&nbsp;is_loadable(string&nbsp;file)</pre>
 <div class="block">Return true if a file can be loaded (ends in .c basically).</div>
 <dl>
 <dl>
@@ -324,7 +324,7 @@ in the middle of the path will be expanded in place (e.g.
 <ul class="blockList">
 <li class="blockList">
 <h4>is_special_dir</h4>
-<pre>public&nbsp;int&nbsp;is_special_dir(string&nbsp;path)</pre>
+<pre>protected&nbsp;int&nbsp;is_special_dir(string&nbsp;path)</pre>
 <div class="block">Returns 1 if a path represents a "." or ".." directory.</div>
 <dl>
 <dl>
@@ -340,7 +340,7 @@ in the middle of the path will be expanded in place (e.g.
 <ul class="blockList">
 <li class="blockList">
 <h4>traverse_tree</h4>
-<pre>public&nbsp;int&nbsp;traverse_tree(string&nbsp;root,&nbsp;closure&nbsp;callback,&nbsp;varargs mixed *args)</pre>
+<pre>protected&nbsp;int&nbsp;traverse_tree(string&nbsp;root,&nbsp;closure&nbsp;callback,&nbsp;varargs mixed *args)</pre>
 <div class="block">Traverse a directory tree.</div>
 <dl>
 <dl>
@@ -358,7 +358,7 @@ in the middle of the path will be expanded in place (e.g.
 <ul class="blockList">
 <li class="blockList">
 <h4>copy_tree</h4>
-<pre>public&nbsp;int&nbsp;copy_tree(string&nbsp;src,&nbsp;string&nbsp;dest)</pre>
+<pre>protected&nbsp;int&nbsp;copy_tree(string&nbsp;src,&nbsp;string&nbsp;dest)</pre>
 <div class="block">Recursively copy files and directories.</div>
 <dl>
 <dl>
@@ -375,7 +375,7 @@ in the middle of the path will be expanded in place (e.g.
 <ul class="blockList">
 <li class="blockList">
 <h4>read_value</h4>
-<pre>public&nbsp;mixed&nbsp;read_value(string&nbsp;file)</pre>
+<pre>protected&nbsp;mixed&nbsp;read_value(string&nbsp;file)</pre>
 <div class="block">Restore a value from a .val file.</div>
 <dl>
 <dl>
@@ -391,7 +391,7 @@ in the middle of the path will be expanded in place (e.g.
 <ul class="blockList">
 <li class="blockList">
 <h4>write_value</h4>
-<pre>public&nbsp;int&nbsp;write_value(string&nbsp;file,&nbsp;mixed&nbsp;value)</pre>
+<pre>protected&nbsp;int&nbsp;write_value(string&nbsp;file,&nbsp;mixed&nbsp;value)</pre>
 <div class="block">Save a value to a .val file.</div>
 <dl>
 <dl>
@@ -417,7 +417,7 @@ in the middle of the path will be expanded in place (e.g.
 </a><a href="#skip-navbar_bottom" title="Skip navigation links"></a><a name="navbar_">
 </a>
 <ul class="navList" title="Navigation">
-<div class="aboutLanguage"><em><strong>gabbo mudlib foundation<br/>version 0.1</strong></em></div>
+<div class="aboutLanguage"><em><strong>Acme MUD<br/>version 0.1</strong></em></div>
 </ul>
 </div>
 <div class="subNav">

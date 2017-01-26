@@ -9,7 +9,7 @@
 </a><a href="#skip-navbar_top" title="Skip navigation links"></a><a name="navbar_">
 </a>
 <ul class="navList" title="Navigation">
-<div class="aboutLanguage"><em><strong>gabbo mudlib foundation<br/>version 0.1</strong></em></div>
+<div class="aboutLanguage"><em><strong>Acme MUD<br/>version 0.1</strong></em></div>
 </ul>
 </div>
 <div class="subNav">
@@ -63,8 +63,9 @@
 <dl>
 <dt>All Inherited Programs:</dt>
 <dd>
-<ul class="tree"><li><a href="../../platform/.lib/message.html" title="">MessageLib </a>
-</li><li class="last"><a href="../../platform/.lib/object.html" title="">ObjectLib </a>
+<ul class="tree"><li><a href="../../platform/.lib/message.html" title="">MessageLib </a>&nbsp;[private]
+<ul class="tree"><li class="last"><a href="../../platform/.lib/prompt.html" title="">PromptLib </a>&nbsp;[private]
+</li></ul></li><li class="last"><a href="../../platform/.lib/capability.html" title="">CapabilityLib </a>&nbsp;[private]
 </li></ul></dd>
 </dl>
 <hr>
@@ -95,16 +96,34 @@ the lib.</div>
 <th class="colFirst" scope="col">Modifier and Type</th>
 <th class="colLast" scope="col">Function and Description</th>
 </tr>
+<tr class="rowColor">
+<td class="colFirst"><code>public&nbsp;void&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../platform/.obj/postal_service.html#create()">create</a></strong>()</code>
+<div class="block">Constructor.</div>
+</td>
+</tr>
 <tr class="altColor">
-<td class="colFirst"><code>public&nbsp;varargs&nbsp;string&nbsp;</code></td>
-<td class="colLast"><code><strong><a href="../../platform/.obj/postal_service.html#prompt_message()">prompt_message</a></strong>(object&nbsp;target,&nbsp;object&nbsp;sender)</code>
-<div class="block">Send a prompt message to an interactive object.</div>
+<td class="colFirst"><code>public&nbsp;void&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../platform/.obj/postal_service.html#newline()">newline</a></strong>(object&nbsp;target)</code>
+<div class="block">Send a newline to an object.</div>
 </td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>public&nbsp;void&nbsp;</code></td>
-<td class="colLast"><code><strong><a href="../../platform/.obj/postal_service.html#send_message()">send_message</a></strong>(object&nbsp;target,&nbsp;string&nbsp;topic,&nbsp;string message mapping&nbsp;context,&nbsp;object&nbsp;sender)</code>
-<div class="block">Send a message to a sensor object.</div>
+<td class="colLast"><code><strong><a href="../../platform/.obj/postal_service.html#prompt_message()">prompt_message</a></strong>(object&nbsp;target,&nbsp;string&nbsp;message,&nbsp;mapping&nbsp;context,&nbsp;object&nbsp;sender)</code>
+<div class="block">Send a prompt message to an object.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>public&nbsp;void&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../platform/.obj/postal_service.html#send_message()">send_message</a></strong>(object&nbsp;target,&nbsp;string&nbsp;topic,&nbsp;string&nbsp;message,&nbsp;mapping&nbsp;context,&nbsp;object&nbsp;sender)</code>
+<div class="block">Send a message to an object.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>public&nbsp;void&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../platform/.obj/postal_service.html#setup()">setup</a></strong>()</code>
+<div class="block">Setup the PostalService.</div>
 </td>
 </tr>
 </table>
@@ -112,14 +131,21 @@ the lib.</div>
 <li class="blockList"><a name="methods_inherited_from_class_/platform/.lib/message">
 </a>
 <h3>Functions inherited from program&nbsp;<a href="../../platform/.lib/message.html" title="program /platform/.lib/message">MessageLib </a></h3>
-<code><a href="../../platform/.lib/message.html#prompt_msg()">prompt_msg</a>, <a href="../../platform/.lib/message.html#send_msg()">send_msg</a>, <a href="../../platform/.lib/message.html#send_prompt()">send_prompt</a>, <a href="../../platform/.lib/message.html#stderr_msg()">stderr_msg</a>, <a href="../../platform/.lib/message.html#stdout_msg()">stdout_msg</a></code></li>
+<code><a href="../../platform/.lib/message.html#send_msg()">send_msg</a>, <a href="../../platform/.lib/message.html#send_newline()">send_newline</a>, <a href="../../platform/.lib/message.html#send_prompt()">send_prompt</a>, <a href="../../platform/.lib/message.html#stderr_msg()">stderr_msg</a>, <a href="../../platform/.lib/message.html#stdout_msg()">stdout_msg</a></code></li>
 
 </ul>
 <ul class="blockList">
-<li class="blockList"><a name="methods_inherited_from_class_/platform/.lib/object">
+<li class="blockList"><a name="methods_inherited_from_class_/platform/.lib/prompt">
 </a>
-<h3>Functions inherited from program&nbsp;<a href="../../platform/.lib/object.html" title="program /platform/.lib/object">ObjectLib </a></h3>
-<code><a href="../../platform/.lib/object.html#get_path_info()">get_path_info</a>, <a href="../../platform/.lib/object.html#is_reachable()">is_reachable</a>, <a href="../../platform/.lib/object.html#reload_object()">reload_object</a></code></li>
+<h3>Functions inherited from program&nbsp;<a href="../../platform/.lib/prompt.html" title="program /platform/.lib/prompt">PromptLib </a></h3>
+<code><a href="../../platform/.lib/prompt.html#command_prompt()">command_prompt</a>, <a href="../../platform/.lib/prompt.html#input_prompt()">input_prompt</a>, <a href="../../platform/.lib/prompt.html#prompt()">prompt</a>, <a href="../../platform/.lib/prompt.html#prompt_info()">prompt_info</a>, <a href="../../platform/.lib/prompt.html#prompt_input()">prompt_input</a></code></li>
+
+</ul>
+<ul class="blockList">
+<li class="blockList"><a name="methods_inherited_from_class_/platform/.lib/capability">
+</a>
+<h3>Functions inherited from program&nbsp;<a href="../../platform/.lib/capability.html" title="program /platform/.lib/capability">CapabilityLib </a></h3>
+<code><a href="../../platform/.lib/capability.html#is_capable()">is_capable</a></code></li>
 
 </ul>
 
@@ -137,19 +163,33 @@ the lib.</div>
 <!--   -->
 </a>
 <h3>Function Detail</h3>
+<a name="setup()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setup</h4>
+<pre>public&nbsp;void&nbsp;setup()</pre>
+<div class="block">Setup the PostalService.</div>
+<dl>
+<dl>
+</dl>
+</li>
+</ul>
 <a name="send_message()">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
 <h4>send_message</h4>
-<pre>public&nbsp;void&nbsp;send_message(object&nbsp;target,&nbsp;string&nbsp;topic,&nbsp;string message mapping&nbsp;context,&nbsp;object&nbsp;sender)</pre>
-<div class="block">Send a message to a sensor object. Target must be a sensor.</div>
+<pre>public&nbsp;void&nbsp;send_message(object&nbsp;target,&nbsp;string&nbsp;topic,&nbsp;string&nbsp;message,&nbsp;mapping&nbsp;context,&nbsp;object&nbsp;sender)</pre>
+<div class="block">Send a message to an object. Target must be a sensor.</div>
 <dl>
 <dl>
 <dt><span class="strong">Parameters:</span></dt>
 <dd><code>target</code> - the object to which the message should be delivered, must be a "sensor" </dd>
 <dd><code>topic</code> - the message topic, a way to group common messages together </dd>
+<dd><code>message</code> - the message to be delivered, a string </dd>
 <dd><code>context</code> - the message context, a mapping </dd>
 <dd><code>sender</code> - the object doing the sending, or 0 for anonymous messages </dd>
 <dt><span class="strong">Returns:</span></dt><dd>a Message struct representing the sent message, or 0 if message could not be sent </dd>
@@ -162,14 +202,46 @@ the lib.</div>
 <ul class="blockList">
 <li class="blockList">
 <h4>prompt_message</h4>
-<pre>public&nbsp;varargs&nbsp;string&nbsp;prompt_message(object&nbsp;target,&nbsp;object&nbsp;sender)</pre>
-<div class="block">Send a prompt message to an interactive object.</div>
+<pre>public&nbsp;void&nbsp;prompt_message(object&nbsp;target,&nbsp;string&nbsp;message,&nbsp;mapping&nbsp;context,&nbsp;object&nbsp;sender)</pre>
+<div class="block">Send a prompt message to an object. Target must be interactive, but not
+necessarily a sensor.</div>
 <dl>
 <dl>
 <dt><span class="strong">Parameters:</span></dt>
-<dd><code>target</code> - the object to prompt </dd>
+<dd><code>target</code> - the object to which the message should be delivered, must be interactive </dd>
+<dd><code>message</code> - the message to be delivered, a string </dd>
+<dd><code>context</code> - the message context, a mapping </dd>
 <dd><code>sender</code> - the object doing the sending, or 0 for anonymous messages </dd>
-<dt><span class="strong">Returns:</span></dt><dd>the prompt that was sent, or 0 unsent </dd>
+<dt><span class="strong">Returns:</span></dt><dd>a Message struct representing the sent message, or 0 if message could not be sent </dd>
+</dl>
+</li>
+</ul>
+<a name="newline()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>newline</h4>
+<pre>public&nbsp;void&nbsp;newline(object&nbsp;target)</pre>
+<div class="block">Send a newline to an object. Newline is sent raw, no additional rendering
+is performend.</div>
+<dl>
+<dl>
+<dt><span class="strong">Parameters:</span></dt>
+<dd><code>target</code> - the object to which the message should be delivered </dd>
+</dl>
+</li>
+</ul>
+<a name="create()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>create</h4>
+<pre>public&nbsp;void&nbsp;create()</pre>
+<div class="block">Constructor.</div>
+<dl>
+<dl>
 </dl>
 </li>
 </ul>
@@ -188,7 +260,7 @@ the lib.</div>
 </a><a href="#skip-navbar_bottom" title="Skip navigation links"></a><a name="navbar_">
 </a>
 <ul class="navList" title="Navigation">
-<div class="aboutLanguage"><em><strong>gabbo mudlib foundation<br/>version 0.1</strong></em></div>
+<div class="aboutLanguage"><em><strong>Acme MUD<br/>version 0.1</strong></em></div>
 </ul>
 </div>
 <div class="subNav">

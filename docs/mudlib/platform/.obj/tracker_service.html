@@ -9,7 +9,7 @@
 </a><a href="#skip-navbar_top" title="Skip navigation links"></a><a name="navbar_">
 </a>
 <ul class="navList" title="Navigation">
-<div class="aboutLanguage"><em><strong>gabbo mudlib foundation<br/>version 0.1</strong></em></div>
+<div class="aboutLanguage"><em><strong>Acme MUD<br/>version 0.1</strong></em></div>
 </ul>
 </div>
 <div class="subNav">
@@ -63,8 +63,9 @@
 <dl>
 <dt>All Inherited Programs:</dt>
 <dd>
-<ul class="tree"><li class="last"><a href="../../platform/.lib/object.html" title="">ObjectLib </a>
-</li></ul></dd>
+<ul class="tree"><li class="last"><a href="../../platform/.lib/object.html" title="">ObjectLib </a>&nbsp;[private]
+<ul class="tree"><li class="last"><a href="../../platform/.lib/access.html" title="">AccessLib </a>&nbsp;[private]
+</li></ul></li></ul></dd>
 </dl>
 <hr>
 <br>
@@ -92,22 +93,28 @@
 <th class="colFirst" scope="col">Modifier and Type</th>
 <th class="colLast" scope="col">Function and Description</th>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>public&nbsp;void&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../platform/.obj/tracker_service.html#create()">create</a></strong>()</code>
 <div class="block">Constructor.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>public&nbsp;void&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../platform/.obj/tracker_service.html#load_trackers()">load_trackers</a></strong>()</code>
 <div class="block">Global tracker load sequence.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>public&nbsp;object&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../platform/.obj/tracker_service.html#reload_tracker()">reload_tracker</a></strong>(string&nbsp;tracker)</code>
 <div class="block">Load or reload a specified tracker object.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>public&nbsp;void&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../platform/.obj/tracker_service.html#setup()">setup</a></strong>()</code>
+<div class="block">Setup the TrackerService.</div>
 </td>
 </tr>
 </table>
@@ -116,6 +123,13 @@
 </a>
 <h3>Functions inherited from program&nbsp;<a href="../../platform/.lib/object.html" title="program /platform/.lib/object">ObjectLib </a></h3>
 <code><a href="../../platform/.lib/object.html#get_path_info()">get_path_info</a>, <a href="../../platform/.lib/object.html#is_reachable()">is_reachable</a>, <a href="../../platform/.lib/object.html#reload_object()">reload_object</a></code></li>
+
+</ul>
+<ul class="blockList">
+<li class="blockList"><a name="methods_inherited_from_class_/platform/.lib/access">
+</a>
+<h3>Functions inherited from program&nbsp;<a href="../../platform/.lib/access.html" title="program /platform/.lib/access">AccessLib </a></h3>
+<code><a href="../../platform/.lib/access.html#get_create_uid()">get_create_uid</a>, <a href="../../platform/.lib/access.html#get_user()">get_user</a></code></li>
 
 </ul>
 
@@ -133,6 +147,19 @@
 <!--   -->
 </a>
 <h3>Function Detail</h3>
+<a name="setup()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setup</h4>
+<pre>public&nbsp;void&nbsp;setup()</pre>
+<div class="block">Setup the TrackerService.</div>
+<dl>
+<dl>
+</dl>
+</li>
+</ul>
 <a name="reload_tracker()">
 <!--   -->
 </a>
@@ -190,7 +217,7 @@
 </a><a href="#skip-navbar_bottom" title="Skip navigation links"></a><a name="navbar_">
 </a>
 <ul class="navList" title="Navigation">
-<div class="aboutLanguage"><em><strong>gabbo mudlib foundation<br/>version 0.1</strong></em></div>
+<div class="aboutLanguage"><em><strong>Acme MUD<br/>version 0.1</strong></em></div>
 </ul>
 </div>
 <div class="subNav">

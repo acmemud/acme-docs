@@ -9,7 +9,7 @@
 </a><a href="#skip-navbar_top" title="Skip navigation links"></a><a name="navbar_">
 </a>
 <ul class="navList" title="Navigation">
-<div class="aboutLanguage"><em><strong>gabbo mudlib foundation<br/>version 0.1</strong></em></div>
+<div class="aboutLanguage"><em><strong>Acme MUD<br/>version 0.1</strong></em></div>
 </ul>
 </div>
 <div class="subNav">
@@ -63,20 +63,26 @@
 <dl>
 <dt>All Inherited Programs:</dt>
 <dd>
-<ul class="tree"><li><a href="../../platform/.module/command_giver.html" title="">CommandGiverMixin </a>
-<ul class="tree"><li><a href="../../platform/.lib/object.html" title="">ObjectLib </a>
-</li><li><a href="../../platform/.lib/file.html" title="">FileLib </a>
-</li><li><a href="../../platform/.lib/array.html" title="">ArrayLib </a>
-</li><li class="last"><a href="../../platform/.lib/command_spec.html" title="">CommandSpecLib </a>
+<ul class="tree"><li><a href="../../platform/.module/command_giver.html" title="">CommandGiverMixin </a>&nbsp;[virtual]
+<ul class="tree"><li><a href="../../platform/.lib/object.html" title="">ObjectLib </a>&nbsp;[private]
+<ul class="tree"><li class="last"><a href="../../platform/.lib/access.html" title="">AccessLib </a>&nbsp;[private]
+</li></ul></li><li><a href="../../platform/.lib/file.html" title="">FileLib </a>&nbsp;[private]
+</li><li><a href="../../platform/.lib/array.html" title="">ArrayLib </a>&nbsp;[private]
+</li><li class="last"><a href="../../platform/.lib/command_spec.html" title="">CommandSpecLib </a>&nbsp;[private]
 <ul class="tree"><li class="last"><a href="../../platform/.lib/file.html" title="">FileLib </a>
-</li></ul></li></ul></li><li><a href="../../platform/.module/sensor.html" title="">SensorMixin </a>
-<ul class="tree"><li><a href="../../platform/.lib/json.html" title="">JSONLib </a>
-</li><li><a href="../../platform/.lib/message.html" title="">MessageLib </a>
-</li><li class="last"><a href="../../platform/.lib/object.html" title="">ObjectLib </a>
-</li></ul></li><li><a href="../../platform/.lib/connection.html" title="">ConnectionLib </a>
-<ul class="tree"><li class="last"><a href="../../platform/.lib/object.html" title="">ObjectLib </a>
-</li></ul></li><li><a href="../../platform/.lib/message.html" title="">MessageLib </a>
-</li><li class="last"><a href="../../platform/.lib/object.html" title="">ObjectLib </a>
+</li></ul></li></ul></li><li><a href="../../platform/.module/sensor.html" title="">SensorMixin </a>&nbsp;[virtual]
+<ul class="tree"><li><a href="../../platform/.lib/json.html" title="">JSONLib </a>&nbsp;[private]
+</li><li><a href="../../platform/.lib/message.html" title="">MessageLib </a>&nbsp;[private]
+<ul class="tree"><li class="last"><a href="../../platform/.lib/prompt.html" title="">PromptLib </a>&nbsp;[private]
+</li></ul></li><li class="last"><a href="../../platform/.lib/object.html" title="">ObjectLib </a>&nbsp;[private]
+<ul class="tree"><li class="last"><a href="../../platform/.lib/access.html" title="">AccessLib </a>&nbsp;[private]
+</li></ul></li></ul></li><li><a href="../../platform/.lib/connection.html" title="">ConnectionLib </a>&nbsp;[private]
+<ul class="tree"><li class="last"><a href="../../platform/.lib/capability.html" title="">CapabilityLib </a>&nbsp;[private]
+</li></ul></li><li><a href="../../platform/.lib/message.html" title="">MessageLib </a>&nbsp;[private]
+<ul class="tree"><li class="last"><a href="../../platform/.lib/prompt.html" title="">PromptLib </a>&nbsp;[private]
+</li></ul></li><li><a href="../../platform/.lib/object.html" title="">ObjectLib </a>&nbsp;[private]
+<ul class="tree"><li class="last"><a href="../../platform/.lib/access.html" title="">AccessLib </a>&nbsp;[private]
+</li></ul></li><li class="last"><a href="../../platform/.lib/prompt.html" title="">PromptLib </a>&nbsp;[private]
 </li></ul></dd>
 </dl>
 <hr>
@@ -105,69 +111,69 @@
 <th class="colFirst" scope="col">Modifier and Type</th>
 <th class="colLast" scope="col">Function and Description</th>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>protected&nbsp;void&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../platform/.obj/login.html#abort()">abort</a></strong>()</code>
 <div class="block">Abort login.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>protected&nbsp;void&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../platform/.obj/login.html#attempt_timeout()">attempt_timeout</a></strong>()</code>
 <div class="block">Check the idle time of this login object and timeout after a period of
 inactivity.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>protected&nbsp;void&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../platform/.obj/login.html#connect()">connect</a></strong>()</code>
 <div class="block">Initiate a new connection.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>public&nbsp;void&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../platform/.obj/login.html#create()">create</a></strong>()</code>
 <div class="block">Constructor.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>protected&nbsp;varargs&nbsp;void&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../platform/.obj/login.html#get_terminal_type()">get_terminal_type</a></strong>(closure&nbsp;callback,&nbsp;int&nbsp;retry)</code>
 <div class="block">Retry loop to wait for terminal type telnet negotation.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>public&nbsp;void&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../platform/.obj/login.html#heart_beat()">heart_beat</a></strong>()</code>
 <div class="block">Called every heart beat interval to check for idle timeout.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>public&nbsp;int&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../platform/.obj/login.html#logon()">logon</a></strong>()</code>
 <div class="block">Invoked by the master object when a new connection is established.</div>
 </td>
 </tr>
-<tr class="rowColor">
-<td class="colFirst"><code>protected&nbsp;void&nbsp;</code></td>
+<tr class="altColor">
+<td class="colFirst"><code>public&nbsp;void&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../platform/.obj/login.html#setup()">setup</a></strong>()</code>
 <div class="block">Setup login object.</div>
 </td>
 </tr>
-<tr class="altColor">
-<td class="colFirst"><code>protected&nbsp;varargs&nbsp;void&nbsp;</code></td>
+<tr class="rowColor">
+<td class="colFirst"><code>public&nbsp;varargs&nbsp;void&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../platform/.obj/login.html#suppress_prompt()">suppress_prompt</a></strong>(string&nbsp;arg)</code>
 <div class="block">Circular input_to() loop to suppress user from getting a prompt from the
 driver.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>protected&nbsp;void&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../platform/.obj/login.html#timeout()">timeout</a></strong>()</code>
 <div class="block">Exit login prompt because of idle timeout.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>protected&nbsp;void&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../platform/.obj/login.html#welcome()">welcome</a></strong>(string&nbsp;terminal,&nbsp;mixed&nbsp;is_default)</code>
 <div class="block">Display the welcome screen.</div>
@@ -178,7 +184,7 @@ driver.</div>
 <li class="blockList"><a name="methods_inherited_from_class_/platform/.module/command_giver">
 </a>
 <h3>Functions inherited from program&nbsp;<a href="../../platform/.module/command_giver.html" title="program /platform/.module/command_giver">CommandGiverMixin </a></h3>
-<code><a href="../../platform/.module/command_giver.html#check_command_access()">check_command_access</a>, <a href="../../platform/.module/command_giver.html#do_command()">do_command</a>, <a href="../../platform/.module/command_giver.html#load_cmd_imports()">load_cmd_imports</a>, <a href="../../platform/.module/command_giver.html#load_controller()">load_controller</a>, <a href="../../platform/.module/command_giver.html#run_script()">run_script</a>, <a href="../../platform/.module/command_giver.html#setup()">setup</a></code></li>
+<code><a href="../../platform/.module/command_giver.html#do_command()">do_command</a>, <a href="../../platform/.module/command_giver.html#is_command_giver()">is_command_giver</a>, <a href="../../platform/.module/command_giver.html#load_cmd_imports()">load_cmd_imports</a>, <a href="../../platform/.module/command_giver.html#load_controller()">load_controller</a>, <a href="../../platform/.module/command_giver.html#run_script()">run_script</a>, <a href="../../platform/.module/command_giver.html#setup()">setup</a>, <a href="../../platform/.module/command_giver.html#teardown()">teardown</a></code></li>
 
 </ul>
 <ul class="blockList">
@@ -186,6 +192,13 @@ driver.</div>
 </a>
 <h3>Functions inherited from program&nbsp;<a href="../../platform/.lib/object.html" title="program /platform/.lib/object">ObjectLib </a></h3>
 <code><a href="../../platform/.lib/object.html#get_path_info()">get_path_info</a>, <a href="../../platform/.lib/object.html#is_reachable()">is_reachable</a>, <a href="../../platform/.lib/object.html#reload_object()">reload_object</a></code></li>
+
+</ul>
+<ul class="blockList">
+<li class="blockList"><a name="methods_inherited_from_class_/platform/.lib/access">
+</a>
+<h3>Functions inherited from program&nbsp;<a href="../../platform/.lib/access.html" title="program /platform/.lib/access">AccessLib </a></h3>
+<code><a href="../../platform/.lib/access.html#get_create_uid()">get_create_uid</a>, <a href="../../platform/.lib/access.html#get_user()">get_user</a></code></li>
 
 </ul>
 <ul class="blockList">
@@ -213,7 +226,7 @@ driver.</div>
 <li class="blockList"><a name="methods_inherited_from_class_/platform/.module/sensor">
 </a>
 <h3>Functions inherited from program&nbsp;<a href="../../platform/.module/sensor.html" title="program /platform/.module/sensor">SensorMixin </a></h3>
-<code><a href="../../platform/.module/sensor.html#on_message()">on_message</a>, <a href="../../platform/.module/sensor.html#query_terminal_type()">query_terminal_type</a>, <a href="../../platform/.module/sensor.html#render_message()">render_message</a>, <a href="../../platform/.module/sensor.html#setup()">setup</a>, <a href="../../platform/.module/sensor.html#try_message()">try_message</a></code></li>
+<code><a href="../../platform/.module/sensor.html#is_sensor()">is_sensor</a>, <a href="../../platform/.module/sensor.html#on_message()">on_message</a>, <a href="../../platform/.module/sensor.html#query_terminal_type()">query_terminal_type</a>, <a href="../../platform/.module/sensor.html#render_message()">render_message</a>, <a href="../../platform/.module/sensor.html#setup()">setup</a>, <a href="../../platform/.module/sensor.html#teardown()">teardown</a>, <a href="../../platform/.module/sensor.html#try_message()">try_message</a></code></li>
 
 </ul>
 <ul class="blockList">
@@ -227,7 +240,14 @@ driver.</div>
 <li class="blockList"><a name="methods_inherited_from_class_/platform/.lib/message">
 </a>
 <h3>Functions inherited from program&nbsp;<a href="../../platform/.lib/message.html" title="program /platform/.lib/message">MessageLib </a></h3>
-<code><a href="../../platform/.lib/message.html#prompt_msg()">prompt_msg</a>, <a href="../../platform/.lib/message.html#send_msg()">send_msg</a>, <a href="../../platform/.lib/message.html#send_prompt()">send_prompt</a>, <a href="../../platform/.lib/message.html#stderr_msg()">stderr_msg</a>, <a href="../../platform/.lib/message.html#stdout_msg()">stdout_msg</a></code></li>
+<code><a href="../../platform/.lib/message.html#send_msg()">send_msg</a>, <a href="../../platform/.lib/message.html#send_newline()">send_newline</a>, <a href="../../platform/.lib/message.html#send_prompt()">send_prompt</a>, <a href="../../platform/.lib/message.html#stderr_msg()">stderr_msg</a>, <a href="../../platform/.lib/message.html#stdout_msg()">stdout_msg</a></code></li>
+
+</ul>
+<ul class="blockList">
+<li class="blockList"><a name="methods_inherited_from_class_/platform/.lib/prompt">
+</a>
+<h3>Functions inherited from program&nbsp;<a href="../../platform/.lib/prompt.html" title="program /platform/.lib/prompt">PromptLib </a></h3>
+<code><a href="../../platform/.lib/prompt.html#command_prompt()">command_prompt</a>, <a href="../../platform/.lib/prompt.html#input_prompt()">input_prompt</a>, <a href="../../platform/.lib/prompt.html#prompt()">prompt</a>, <a href="../../platform/.lib/prompt.html#prompt_info()">prompt_info</a>, <a href="../../platform/.lib/prompt.html#prompt_input()">prompt_input</a></code></li>
 
 </ul>
 <ul class="blockList">
@@ -235,6 +255,13 @@ driver.</div>
 </a>
 <h3>Functions inherited from program&nbsp;<a href="../../platform/.lib/connection.html" title="program /platform/.lib/connection">ConnectionLib </a></h3>
 <code><a href="../../platform/.lib/connection.html#connect_session()">connect_session</a>, <a href="../../platform/.lib/connection.html#query_screen_length()">query_screen_length</a>, <a href="../../platform/.lib/connection.html#query_screen_width()">query_screen_width</a>, <a href="../../platform/.lib/connection.html#query_terminal_type()">query_terminal_type</a>, <a href="../../platform/.lib/connection.html#restore_prompt()">restore_prompt</a></code></li>
+
+</ul>
+<ul class="blockList">
+<li class="blockList"><a name="methods_inherited_from_class_/platform/.lib/capability">
+</a>
+<h3>Functions inherited from program&nbsp;<a href="../../platform/.lib/capability.html" title="program /platform/.lib/capability">CapabilityLib </a></h3>
+<code><a href="../../platform/.lib/capability.html#is_capable()">is_capable</a></code></li>
 
 </ul>
 
@@ -258,7 +285,7 @@ driver.</div>
 <ul class="blockList">
 <li class="blockList">
 <h4>setup</h4>
-<pre>protected&nbsp;void&nbsp;setup()</pre>
+<pre>public&nbsp;void&nbsp;setup()</pre>
 <div class="block">Setup login object.</div>
 <dl>
 <dl>
@@ -286,7 +313,7 @@ resumed and a welcome screen is displayed.</div>
 <ul class="blockList">
 <li class="blockList">
 <h4>suppress_prompt</h4>
-<pre>protected&nbsp;varargs&nbsp;void&nbsp;suppress_prompt(string&nbsp;arg)</pre>
+<pre>public&nbsp;varargs&nbsp;void&nbsp;suppress_prompt(string&nbsp;arg)</pre>
 <div class="block">Circular input_to() loop to suppress user from getting a prompt from the
 driver.</div>
 <dl>
@@ -424,7 +451,7 @@ inactivity.</div>
 </a><a href="#skip-navbar_bottom" title="Skip navigation links"></a><a name="navbar_">
 </a>
 <ul class="navList" title="Navigation">
-<div class="aboutLanguage"><em><strong>gabbo mudlib foundation<br/>version 0.1</strong></em></div>
+<div class="aboutLanguage"><em><strong>Acme MUD<br/>version 0.1</strong></em></div>
 </ul>
 </div>
 <div class="subNav">

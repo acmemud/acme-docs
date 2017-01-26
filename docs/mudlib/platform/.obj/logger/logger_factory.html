@@ -9,7 +9,7 @@
 </a><a href="#skip-navbar_top" title="Skip navigation links"></a><a name="navbar_">
 </a>
 <ul class="navList" title="Navigation">
-<div class="aboutLanguage"><em><strong>gabbo mudlib foundation<br/>version 0.1</strong></em></div>
+<div class="aboutLanguage"><em><strong>Acme MUD<br/>version 0.1</strong></em></div>
 </ul>
 </div>
 <div class="subNav">
@@ -63,12 +63,22 @@
 <dl>
 <dt>All Inherited Programs:</dt>
 <dd>
-<ul class="tree"><li><a href="../../../platform/.lib/file.html" title="">FileLib </a>
-</li><li><a href="../../../platform/.lib/object.html" title="">ObjectLib </a>
-</li><li><a href="../../../platform/.lib/zone.html" title="">ZoneLib </a>
-<ul class="tree"><li class="last"><a href="../../../platform/.lib/object.html" title="">ObjectLib </a>
-</li></ul></li><li class="last"><a href="../../...html" title=""></a>
-</li></ul></dd>
+<ul class="tree"><li><a href="../../../platform/.lib/file.html" title="">FileLib </a>&nbsp;[private]
+</li><li><a href="../../../platform/.lib/object.html" title="">ObjectLib </a>&nbsp;[private]
+<ul class="tree"><li class="last"><a href="../../../platform/.lib/access.html" title="">AccessLib </a>&nbsp;[private]
+</li></ul></li><li><a href="../../../platform/.lib/zone.html" title="">ZoneLib </a>&nbsp;[private]
+<ul class="tree"><li class="last"><a href="../../../platform/.lib/object.html" title="">ObjectLib </a>&nbsp;[private]
+<ul class="tree"><li class="last"><a href="../../../platform/.lib/access.html" title="">AccessLib </a>&nbsp;[private]
+</li></ul></li></ul></li><li class="last"><a href="../../../platform/.lib/format_string.html" title="">FormatStringLib </a>&nbsp;[private]
+<ul class="tree"><li><a href="../../../platform/.lib/argument.html" title="">ArgumentLib </a>&nbsp;[private]
+<ul class="tree"><li><a href="../../../platform/.lib/string.html" title="">StringLib </a>&nbsp;[private]
+<ul class="tree"><li class="last"><a href="../../../platform/.lib/array.html" title="">ArrayLib </a>&nbsp;[private]
+</li></ul></li><li class="last"><a href="../../../platform/.lib/array.html" title="">ArrayLib </a>&nbsp;[private]
+</li></ul></li><li><a href="../../../platform/.lib/array.html" title="">ArrayLib </a>&nbsp;[private]
+</li><li><a href="../../../platform/.lib/string.html" title="">StringLib </a>&nbsp;[private]
+<ul class="tree"><li class="last"><a href="../../../platform/.lib/array.html" title="">ArrayLib </a>&nbsp;[private]
+</li></ul></li><li class="last"><a href="../../../platform/.lib/closure.html" title="">ClosureLib </a>&nbsp;[private]
+</li></ul></li></ul></dd>
 </dl>
 <hr>
 <br>
@@ -102,22 +112,36 @@ logger objects which are no longer in use.</div>
 <th class="colLast" scope="col">Function and Description</th>
 </tr>
 <tr class="altColor">
-<td class="colFirst"><code>public&nbsp;int&nbsp;</code></td>
+<td class="colFirst"><code>protected&nbsp;int&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../platform/.obj/logger/logger_factory.html#clean_up_loggers()">clean_up_loggers</a></strong>()</code>
+<div class="block">Clean up stale loggers, called once per reset.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>public&nbsp;void&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../../platform/.obj/logger/logger_factory.html#create()">create</a></strong>()</code>
 <div class="block">Initialize logger and formatter maps.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>public&nbsp;varargs&nbsp;object&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../../platform/.obj/logger/logger_factory.html#get_logger()">get_logger</a></strong>(mixed&nbsp;zone,&nbsp;object&nbsp;rel,&nbsp;int&nbsp;reconfig)</code>
 <div class="block">Retrieve a logger instance for the given zone from the pool, or create
 a new one from configuration.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>public&nbsp;object&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../../platform/.obj/logger/logger_factory.html#get_null_logger()">get_null_logger</a></strong>()</code>
 <div class="block">Return a new no-op logger.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>protected&nbsp;void&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../platform/.obj/logger/logger_factory.html#init_static_loggers()">init_static_loggers</a></strong>()</code>
+<div class="block">To keep things from getting really confusing, we have two statically
+configured loggers, one for the factory itself to use, and one for all
+loggers to use.</div>
 </td>
 </tr>
 <tr class="rowColor">
@@ -128,16 +152,41 @@ structured than a string.</div>
 </td>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><code>protected&nbsp;mapping&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../platform/.obj/logger/logger_factory.html#read_config()">read_config</a></strong>(string&nbsp;zone,&nbsp;string&nbsp;dir)</code>
+<div class="block">Read in logger configuration for the specified zone.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>protected&nbsp;string&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../platform/.obj/logger/logger_factory.html#read_prop_value()">read_prop_value</a></strong>(mapping&nbsp;props,&nbsp;string&nbsp;prop,&nbsp;string&nbsp;path,&nbsp;string&nbsp;zone)</code>
+<div class="block">Look for a property in the property mapping by name which matches a
+specific zone, and return its value.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>protected&nbsp;mapping&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../platform/.obj/logger/logger_factory.html#read_properties()">read_properties</a></strong>(string&nbsp;prop_file)</code>
+<div class="block">Parse a properties file into a mapping of property names to their values.</div>
+</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>public&nbsp;int&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../../platform/.obj/logger/logger_factory.html#release_logger()">release_logger</a></strong>(mixed&nbsp;zone,&nbsp;string&nbsp;euid)</code>
 <div class="block">Releases a logger object from the logger pool, thereby removing any
 references to it held by the factory.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>public&nbsp;int&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../../platform/.obj/logger/logger_factory.html#reset()">reset</a></strong>()</code>
 <div class="block">Clean up stale loggers.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>public&nbsp;void&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../platform/.obj/logger/logger_factory.html#setup()">setup</a></strong>()</code>
+<div class="block">Setup the LoggerFactory.</div>
 </td>
 </tr>
 </table>
@@ -156,10 +205,52 @@ references to it held by the factory.</div>
 
 </ul>
 <ul class="blockList">
+<li class="blockList"><a name="methods_inherited_from_class_/platform/.lib/access">
+</a>
+<h3>Functions inherited from program&nbsp;<a href="../../../platform/.lib/access.html" title="program /platform/.lib/access">AccessLib </a></h3>
+<code><a href="../../../platform/.lib/access.html#get_create_uid()">get_create_uid</a>, <a href="../../../platform/.lib/access.html#get_user()">get_user</a></code></li>
+
+</ul>
+<ul class="blockList">
 <li class="blockList"><a name="methods_inherited_from_class_/platform/.lib/zone">
 </a>
 <h3>Functions inherited from program&nbsp;<a href="../../../platform/.lib/zone.html" title="program /platform/.lib/zone">ZoneLib </a></h3>
 <code><a href="../../../platform/.lib/zone.html#get_parent_zone()">get_parent_zone</a>, <a href="../../../platform/.lib/zone.html#get_zone()">get_zone</a>, <a href="../../../platform/.lib/zone.html#valid_zone_id()">valid_zone_id</a></code></li>
+
+</ul>
+<ul class="blockList">
+<li class="blockList"><a name="methods_inherited_from_class_/platform/.lib/format_string">
+</a>
+<h3>Functions inherited from program&nbsp;<a href="../../../platform/.lib/format_string.html" title="program /platform/.lib/format_string">FormatStringLib </a></h3>
+<code><a href="../../../platform/.lib/format_string.html#explode_format()">explode_format</a>, <a href="../../../platform/.lib/format_string.html#parse_format()">parse_format</a></code></li>
+
+</ul>
+<ul class="blockList">
+<li class="blockList"><a name="methods_inherited_from_class_/platform/.lib/argument">
+</a>
+<h3>Functions inherited from program&nbsp;<a href="../../../platform/.lib/argument.html" title="program /platform/.lib/argument">ArgumentLib </a></h3>
+<code><a href="../../../platform/.lib/argument.html#explode_args()">explode_args</a>, <a href="../../../platform/.lib/argument.html#explode_nested()">explode_nested</a>, <a href="../../../platform/.lib/argument.html#explode_unescaped()">explode_unescaped</a>, <a href="../../../platform/.lib/argument.html#find_close_char()">find_close_char</a></code></li>
+
+</ul>
+<ul class="blockList">
+<li class="blockList"><a name="methods_inherited_from_class_/platform/.lib/string">
+</a>
+<h3>Functions inherited from program&nbsp;<a href="../../../platform/.lib/string.html" title="program /platform/.lib/string">StringLib </a></h3>
+<code><a href="../../../platform/.lib/string.html#crop_string()">crop_string</a>, <a href="../../../platform/.lib/string.html#find_nonws()">find_nonws</a>, <a href="../../../platform/.lib/string.html#is_escaped()">is_escaped</a>, <a href="../../../platform/.lib/string.html#match_quote()">match_quote</a>, <a href="../../../platform/.lib/string.html#search_str_unescaped()">search_str_unescaped</a>, <a href="../../../platform/.lib/string.html#unescape()">unescape</a>, <a href="../../../platform/.lib/string.html#unquote()">unquote</a></code></li>
+
+</ul>
+<ul class="blockList">
+<li class="blockList"><a name="methods_inherited_from_class_/platform/.lib/array">
+</a>
+<h3>Functions inherited from program&nbsp;<a href="../../../platform/.lib/array.html" title="program /platform/.lib/array">ArrayLib </a></h3>
+<code><a href="../../../platform/.lib/array.html#anti_searcha()">anti_searcha</a>, <a href="../../../platform/.lib/array.html#anti_searcha_any()">anti_searcha_any</a>, <a href="../../../platform/.lib/array.html#deep_flatten_array()">deep_flatten_array</a>, <a href="../../../platform/.lib/array.html#flatten_array()">flatten_array</a>, <a href="../../../platform/.lib/array.html#m_value()">m_value</a>, <a href="../../../platform/.lib/array.html#mapping_array()">mapping_array</a>, <a href="../../../platform/.lib/array.html#random_key()">random_key</a>, <a href="../../../platform/.lib/array.html#reduce()">reduce</a>, <a href="../../../platform/.lib/array.html#searcha()">searcha</a>, <a href="../../../platform/.lib/array.html#searcha_any()">searcha_any</a>, <a href="../../../platform/.lib/array.html#unique_array()">unique_array</a></code></li>
+
+</ul>
+<ul class="blockList">
+<li class="blockList"><a name="methods_inherited_from_class_/platform/.lib/closure">
+</a>
+<h3>Functions inherited from program&nbsp;<a href="../../../platform/.lib/closure.html" title="program /platform/.lib/closure">ClosureLib </a></h3>
+<code><a href="../../../platform/.lib/closure.html#reconstruct_lambda()">reconstruct_lambda</a></code></li>
 
 </ul>
 
@@ -177,6 +268,19 @@ references to it held by the factory.</div>
 <!--   -->
 </a>
 <h3>Function Detail</h3>
+<a name="setup()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setup</h4>
+<pre>public&nbsp;void&nbsp;setup()</pre>
+<div class="block">Setup the LoggerFactory.</div>
+<dl>
+<dl>
+</dl>
+</li>
+</ul>
 <a name="get_logger()">
 <!--   -->
 </a>
@@ -197,6 +301,72 @@ delimiters (forward slashes) will be converted to the zone delimiter
 <dd><code>rel</code> - optional object to use for resolving relative paths in configuration files; if unspecified, previous_object() will be used. </dd>
 <dd><code>reconfig</code> - set this flag to 1 if you need to re-read the logger configuration </dd>
 <dt><span class="strong">Returns:</span></dt><dd>a logger instance </dd>
+</dl>
+</li>
+</ul>
+<a name="read_config()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>read_config</h4>
+<pre>protected&nbsp;mapping&nbsp;read_config(string&nbsp;zone,&nbsp;string&nbsp;dir)</pre>
+<div class="block">Read in logger configuration for the specified zone. Starting in the
+specified directory, this function will look for the file
+"etc/logger.properties", and inspect the file for any configuration
+properties which apply to the specified zone. The result is a mapping
+of the form:
+<code>
+([ "output" : ({ ({ int type, string target }), ... }),
+"format" : str format_string,
+"level"  : str level
+])
+</code>
+FUTURE better to use a struct than a mapping here</div>
+<dl>
+<dl>
+<dt><span class="strong">Parameters:</span></dt>
+<dd><code>zone</code> - the zone to match configuration properties against </dd>
+<dd><code>dir</code> - the starting directory from which to search for properties files </dd>
+<dt><span class="strong">Returns:</span></dt><dd>the configuration mapping </dd>
+</dl>
+</li>
+</ul>
+<a name="read_properties()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>read_properties</h4>
+<pre>protected&nbsp;mapping&nbsp;read_properties(string&nbsp;prop_file)</pre>
+<div class="block">Parse a properties file into a mapping of property names to their values.
+Properties are defined in a single line, of the format "name=value". Lines
+beginning with "#" will be treated as comments.</div>
+<dl>
+<dl>
+<dt><span class="strong">Parameters:</span></dt>
+<dd><code>prop_file</code> - the path to the property file </dd>
+<dt><span class="strong">Returns:</span></dt><dd>a mapping of property names to values, or 0 if the file could not be read </dd>
+</dl>
+</li>
+</ul>
+<a name="read_prop_value()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>read_prop_value</h4>
+<pre>protected&nbsp;string&nbsp;read_prop_value(mapping&nbsp;props,&nbsp;string&nbsp;prop,&nbsp;string&nbsp;path,&nbsp;string&nbsp;zone)</pre>
+<div class="block">Look for a property in the property mapping by name which matches a
+specific zone, and return its value.</div>
+<dl>
+<dl>
+<dt><span class="strong">Parameters:</span></dt>
+<dd><code>props</code> - the property map </dd>
+<dd><code>prop</code> - the name of the property to find </dd>
+<dd><code>path</code> - zones in the property file will be resolved relative to this path (delimited by periods) </dd>
+<dd><code>zone</code> - the zone which a property must match to be returned </dd>
+<dt><span class="strong">Returns:</span></dt><dd>the property value for the specified property name and zone, or 0 if no matching property could be found </dd>
 </dl>
 </li>
 </ul>
@@ -253,13 +423,44 @@ the logger will also be destructed.</div>
 </dl>
 </li>
 </ul>
+<a name="clean_up_loggers()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>clean_up_loggers</h4>
+<pre>protected&nbsp;int&nbsp;clean_up_loggers()</pre>
+<div class="block">Clean up stale loggers, called once per reset. A logger is considered
+stale if it hasn't been referenced in 5 minutes, and is referenced by
+nothing except the LoggerFactory.</div>
+<dl>
+<dl>
+<dt><span class="strong">Returns:</span></dt><dd>the number of logging zones released (may be more than the number loggers destructed if loggers are shared between zones) </dd>
+</dl>
+</li>
+</ul>
+<a name="init_static_loggers()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>init_static_loggers</h4>
+<pre>protected&nbsp;void&nbsp;init_static_loggers()</pre>
+<div class="block">To keep things from getting really confusing, we have two statically
+configured loggers, one for the factory itself to use, and one for all
+loggers to use.</div>
+<dl>
+<dl>
+</dl>
+</li>
+</ul>
 <a name="create()">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
 <h4>create</h4>
-<pre>public&nbsp;int&nbsp;create()</pre>
+<pre>public&nbsp;void&nbsp;create()</pre>
 <div class="block">Initialize logger and formatter maps.</div>
 <dl>
 <dl>
@@ -296,7 +497,7 @@ the logger will also be destructed.</div>
 </a><a href="#skip-navbar_bottom" title="Skip navigation links"></a><a name="navbar_">
 </a>
 <ul class="navList" title="Navigation">
-<div class="aboutLanguage"><em><strong>gabbo mudlib foundation<br/>version 0.1</strong></em></div>
+<div class="aboutLanguage"><em><strong>Acme MUD<br/>version 0.1</strong></em></div>
 </ul>
 </div>
 <div class="subNav">

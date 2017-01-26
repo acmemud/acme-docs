@@ -9,7 +9,7 @@
 </a><a href="#skip-navbar_top" title="Skip navigation links"></a><a name="navbar_">
 </a>
 <ul class="navList" title="Navigation">
-<div class="aboutLanguage"><em><strong>gabbo mudlib foundation<br/>version 0.1</strong></em></div>
+<div class="aboutLanguage"><em><strong>Acme MUD<br/>version 0.1</strong></em></div>
 </ul>
 </div>
 <div class="subNav">
@@ -63,8 +63,8 @@
 <dl>
 <dt>All Inherited Programs:</dt>
 <dd>
-<ul class="tree"><li class="last"><a href="../../../platform/.lib/sql.html" title="">SqlLib </a>
-<ul class="tree"><li class="last"><a href="../../../platform/.lib/json.html" title="">JSONLib </a>
+<ul class="tree"><li class="last"><a href="../../../platform/.lib/sql.html" title="">SqlLib </a>&nbsp;[private]
+<ul class="tree"><li class="last"><a href="../../../platform/.lib/json.html" title="">JSONLib </a>&nbsp;[private]
 </li></ul></li></ul></dd>
 </dl>
 <hr>
@@ -100,21 +100,33 @@
 </td>
 </tr>
 <tr class="rowColor">
+<td class="colFirst"><code>public&nbsp;void&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../platform/.obj/sql/sqlite_client.html#create()">create</a></strong>()</code>
+<div class="block">Constructor.</div>
+</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><code>public&nbsp;varargs&nbsp;int&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../../platform/.obj/sql/sqlite_client.html#create_table()">create_table</a></strong>(string&nbsp;table,&nbsp;mapping *cols,&nbsp;closure&nbsp;callback,&nbsp;varargs mixed *args)</code>
 <div class="block">Create a new table.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>public&nbsp;varargs&nbsp;int&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../../platform/.obj/sql/sqlite_client.html#insert()">insert</a></strong>(string&nbsp;table,&nbsp;mapping&nbsp;data,&nbsp;closure&nbsp;callback,&nbsp;varargs mixed *args)</code>
 <div class="block">Insert a new row into the database.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>public&nbsp;varargs&nbsp;int&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../../platform/.obj/sql/sqlite_client.html#select()">select</a></strong>(string&nbsp;table,&nbsp;mapping&nbsp;key,&nbsp;closure&nbsp;callback,&nbsp;varargs mixed *args)</code>
 <div class="block">Select rows from a table.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>public&nbsp;void&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../platform/.obj/sql/sqlite_client.html#setup()">setup</a></strong>()</code>
+<div class="block">Setup the SQLiteClient.</div>
 </td>
 </tr>
 <tr class="altColor">
@@ -159,6 +171,19 @@
 <!--   -->
 </a>
 <h3>Function Detail</h3>
+<a name="setup()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setup</h4>
+<pre>public&nbsp;void&nbsp;setup()</pre>
+<div class="block">Setup the SQLiteClient.</div>
+<dl>
+<dl>
+</dl>
+</li>
+</ul>
 <a name="connect()">
 <!--   -->
 </a>
@@ -269,6 +294,19 @@
 </dl>
 </li>
 </ul>
+<a name="create()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>create</h4>
+<pre>public&nbsp;void&nbsp;create()</pre>
+<div class="block">Constructor.</div>
+<dl>
+<dl>
+</dl>
+</li>
+</ul>
 </li>
 </ul>
 </li>
@@ -284,7 +322,7 @@
 </a><a href="#skip-navbar_bottom" title="Skip navigation links"></a><a name="navbar_">
 </a>
 <ul class="navList" title="Navigation">
-<div class="aboutLanguage"><em><strong>gabbo mudlib foundation<br/>version 0.1</strong></em></div>
+<div class="aboutLanguage"><em><strong>Acme MUD<br/>version 0.1</strong></em></div>
 </ul>
 </div>
 <div class="subNav">

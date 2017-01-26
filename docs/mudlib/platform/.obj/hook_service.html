@@ -9,7 +9,7 @@
 </a><a href="#skip-navbar_top" title="Skip navigation links"></a><a name="navbar_">
 </a>
 <ul class="navList" title="Navigation">
-<div class="aboutLanguage"><em><strong>gabbo mudlib foundation<br/>version 0.1</strong></em></div>
+<div class="aboutLanguage"><em><strong>Acme MUD<br/>version 0.1</strong></em></div>
 </ul>
 </div>
 <div class="subNav">
@@ -63,8 +63,9 @@
 <dl>
 <dt>All Inherited Programs:</dt>
 <dd>
-<ul class="tree"><li class="last"><a href="../../platform/.lib/object.html" title="">ObjectLib </a>
-</li></ul></dd>
+<ul class="tree"><li class="last"><a href="../../platform/.lib/object.html" title="">ObjectLib </a>&nbsp;[private]
+<ul class="tree"><li class="last"><a href="../../platform/.lib/access.html" title="">AccessLib </a>&nbsp;[private]
+</li></ul></li></ul></dd>
 </dl>
 <hr>
 <br>
@@ -130,14 +131,14 @@
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>public&nbsp;int&nbsp;</code></td>
-<td class="colLast"><code><strong><a href="../../platform/.obj/hook_service.html#ob->create()">ob->create</a></strong>()</code>
-<div class="block"></div>
+<td class="colLast"><code><strong><a href="../../platform/.obj/hook_service.html#reset_hook()">reset_hook</a></strong>(object&nbsp;ob)</code>
+<div class="block">Reset hook.</div>
 </td>
 </tr>
 <tr class="altColor">
-<td class="colFirst"><code>public&nbsp;int&nbsp;</code></td>
-<td class="colLast"><code><strong><a href="../../platform/.obj/hook_service.html#reset_hook()">reset_hook</a></strong>(object&nbsp;ob)</code>
-<div class="block">Reset hook.</div>
+<td class="colFirst"><code>public&nbsp;void&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../platform/.obj/hook_service.html#setup()">setup</a></strong>()</code>
+<div class="block">Setup the HookService.</div>
 </td>
 </tr>
 <tr class="rowColor">
@@ -147,7 +148,7 @@
 </td>
 </tr>
 <tr class="altColor">
-<td class="colFirst"><code>public&nbsp;void&nbsp;</code></td>
+<td class="colFirst"><code>protected&nbsp;void&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../platform/.obj/hook_service.html#track_object()">track_object</a></strong>(object&nbsp;ob)</code>
 <div class="block">Used by the create hook to notify appropriate tracker objects of the
 creation of a new object.</div>
@@ -167,6 +168,13 @@ creation of a new object.</div>
 <code><a href="../../platform/.lib/object.html#get_path_info()">get_path_info</a>, <a href="../../platform/.lib/object.html#is_reachable()">is_reachable</a>, <a href="../../platform/.lib/object.html#reload_object()">reload_object</a></code></li>
 
 </ul>
+<ul class="blockList">
+<li class="blockList"><a name="methods_inherited_from_class_/platform/.lib/access">
+</a>
+<h3>Functions inherited from program&nbsp;<a href="../../platform/.lib/access.html" title="program /platform/.lib/access">AccessLib </a></h3>
+<code><a href="../../platform/.lib/access.html#get_create_uid()">get_create_uid</a>, <a href="../../platform/.lib/access.html#get_user()">get_user</a></code></li>
+
+</ul>
 
 </li>
 </ul>
@@ -182,6 +190,19 @@ creation of a new object.</div>
 <!--   -->
 </a>
 <h3>Function Detail</h3>
+<a name="setup()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setup</h4>
+<pre>public&nbsp;void&nbsp;setup()</pre>
+<div class="block">Setup the HookService.</div>
+<dl>
+<dl>
+</dl>
+</li>
+</ul>
 <a name="telnet_neg_hook()">
 <!--   -->
 </a>
@@ -277,7 +298,7 @@ object.</div>
 <ul class="blockList">
 <li class="blockList">
 <h4>track_object</h4>
-<pre>public&nbsp;void&nbsp;track_object(object&nbsp;ob)</pre>
+<pre>protected&nbsp;void&nbsp;track_object(object&nbsp;ob)</pre>
 <div class="block">Used by the create hook to notify appropriate tracker objects of the
 creation of a new object.</div>
 <dl>
@@ -302,19 +323,6 @@ invoking create() in the new object.</div>
 <dt><span class="strong">Parameters:</span></dt>
 <dd><code>ob</code> - the object being created </dd>
 <dt><span class="strong">Returns:</span></dt><dd>0, to indicate the object's current time to reset should be preserved </dd>
-</dl>
-</li>
-</ul>
-<a name="ob->create()">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>ob->create</h4>
-<pre>public&nbsp;int&nbsp;ob->create()</pre>
-<div class="block"></div>
-<dl>
-<dl>
 </dl>
 </li>
 </ul>
@@ -379,7 +387,7 @@ invoking create() in the new object.</div>
 </a><a href="#skip-navbar_bottom" title="Skip navigation links"></a><a name="navbar_">
 </a>
 <ul class="navList" title="Navigation">
-<div class="aboutLanguage"><em><strong>gabbo mudlib foundation<br/>version 0.1</strong></em></div>
+<div class="aboutLanguage"><em><strong>Acme MUD<br/>version 0.1</strong></em></div>
 </ul>
 </div>
 <div class="subNav">

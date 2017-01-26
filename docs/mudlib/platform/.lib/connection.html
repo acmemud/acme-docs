@@ -9,7 +9,7 @@
 </a><a href="#skip-navbar_top" title="Skip navigation links"></a><a name="navbar_">
 </a>
 <ul class="navList" title="Navigation">
-<div class="aboutLanguage"><em><strong>gabbo mudlib foundation<br/>version 0.1</strong></em></div>
+<div class="aboutLanguage"><em><strong>Acme MUD<br/>version 0.1</strong></em></div>
 </ul>
 </div>
 <div class="subNav">
@@ -63,7 +63,7 @@
 <dl>
 <dt>All Inherited Programs:</dt>
 <dd>
-<ul class="tree"><li class="last"><a href="../../platform/.lib/object.html" title="">ObjectLib </a>
+<ul class="tree"><li class="last"><a href="../../platform/.lib/capability.html" title="">CapabilityLib </a>&nbsp;[private]
 </li></ul></dd>
 </dl>
 <hr>
@@ -93,41 +93,41 @@
 <th class="colLast" scope="col">Function and Description</th>
 </tr>
 <tr class="rowColor">
-<td class="colFirst"><code>public&nbsp;int&nbsp;</code></td>
+<td class="colFirst"><code>protected&nbsp;int&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../platform/.lib/connection.html#connect_session()">connect_session</a></strong>(object&nbsp;who,&nbsp;string&nbsp;session)</code>
 <div class="block">Connect an existing interactive object to a new session.</div>
 </td>
 </tr>
 <tr class="altColor">
-<td class="colFirst"><code>public&nbsp;int&nbsp;</code></td>
+<td class="colFirst"><code>protected&nbsp;int&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../platform/.lib/connection.html#query_screen_length()">query_screen_length</a></strong>(object&nbsp;ob)</code>
 <div class="block">Get the screen length of a connected object.</div>
 </td>
 </tr>
 <tr class="rowColor">
-<td class="colFirst"><code>public&nbsp;int&nbsp;</code></td>
+<td class="colFirst"><code>protected&nbsp;int&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../platform/.lib/connection.html#query_screen_width()">query_screen_width</a></strong>(object&nbsp;ob)</code>
 <div class="block">Get the screen width of a connected object.</div>
 </td>
 </tr>
 <tr class="altColor">
-<td class="colFirst"><code>public&nbsp;varargs&nbsp;string&nbsp;</code></td>
+<td class="colFirst"><code>protected&nbsp;varargs&nbsp;string&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../platform/.lib/connection.html#query_terminal_type()">query_terminal_type</a></strong>(object&nbsp;ob)</code>
 <div class="block">Get the terminal type of a connected object.</div>
 </td>
 </tr>
 <tr class="rowColor">
-<td class="colFirst"><code>public&nbsp;varargs&nbsp;void&nbsp;</code></td>
+<td class="colFirst"><code>protected&nbsp;varargs&nbsp;void&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../platform/.lib/connection.html#restore_prompt()">restore_prompt</a></strong>(object&nbsp;ob)</code>
-<div class="block">Restore a connected object's configured prompt.</div>
+<div class="block"></div>
 </td>
 </tr>
 </table>
 <ul class="blockList">
-<li class="blockList"><a name="methods_inherited_from_class_/platform/.lib/object">
+<li class="blockList"><a name="methods_inherited_from_class_/platform/.lib/capability">
 </a>
-<h3>Functions inherited from program&nbsp;<a href="../../platform/.lib/object.html" title="program /platform/.lib/object">ObjectLib </a></h3>
-<code><a href="../../platform/.lib/object.html#get_path_info()">get_path_info</a>, <a href="../../platform/.lib/object.html#is_reachable()">is_reachable</a>, <a href="../../platform/.lib/object.html#reload_object()">reload_object</a></code></li>
+<h3>Functions inherited from program&nbsp;<a href="../../platform/.lib/capability.html" title="program /platform/.lib/capability">CapabilityLib </a></h3>
+<code><a href="../../platform/.lib/capability.html#is_capable()">is_capable</a></code></li>
 
 </ul>
 
@@ -145,13 +145,28 @@
 <!--   -->
 </a>
 <h3>Function Detail</h3>
+<a name="restore_prompt()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>restore_prompt</h4>
+<pre>protected&nbsp;varargs&nbsp;void&nbsp;restore_prompt(object&nbsp;ob)</pre>
+<div class="block"></div>
+<dl>
+<dl>
+<dt><span class="strong">Parameters:</span></dt>
+<dd><code>ob</code> - </dd>
+</dl>
+</li>
+</ul>
 <a name="connect_session()">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
 <h4>connect_session</h4>
-<pre>public&nbsp;int&nbsp;connect_session(object&nbsp;who,&nbsp;string&nbsp;session)</pre>
+<pre>protected&nbsp;int&nbsp;connect_session(object&nbsp;who,&nbsp;string&nbsp;session)</pre>
 <div class="block">Connect an existing interactive object to a new session. This will exec them
 into the session avatar and update their connection info accordingly. The
 specified session will then become a "connected" session.</div>
@@ -170,7 +185,7 @@ specified session will then become a "connected" session.</div>
 <ul class="blockList">
 <li class="blockList">
 <h4>query_screen_width</h4>
-<pre>public&nbsp;int&nbsp;query_screen_width(object&nbsp;ob)</pre>
+<pre>protected&nbsp;int&nbsp;query_screen_width(object&nbsp;ob)</pre>
 <div class="block">Get the screen width of a connected object.</div>
 <dl>
 <dl>
@@ -186,7 +201,7 @@ specified session will then become a "connected" session.</div>
 <ul class="blockList">
 <li class="blockList">
 <h4>query_screen_length</h4>
-<pre>public&nbsp;int&nbsp;query_screen_length(object&nbsp;ob)</pre>
+<pre>protected&nbsp;int&nbsp;query_screen_length(object&nbsp;ob)</pre>
 <div class="block">Get the screen length of a connected object.</div>
 <dl>
 <dl>
@@ -202,28 +217,13 @@ specified session will then become a "connected" session.</div>
 <ul class="blockList">
 <li class="blockList">
 <h4>query_terminal_type</h4>
-<pre>public&nbsp;varargs&nbsp;string&nbsp;query_terminal_type(object&nbsp;ob)</pre>
+<pre>protected&nbsp;varargs&nbsp;string&nbsp;query_terminal_type(object&nbsp;ob)</pre>
 <div class="block">Get the terminal type of a connected object.</div>
 <dl>
 <dl>
 <dt><span class="strong">Parameters:</span></dt>
 <dd><code>ob</code> - the connected object, defaults to THISO </dd>
 <dt><span class="strong">Returns:</span></dt><dd>the terminal type </dd>
-</dl>
-</li>
-</ul>
-<a name="restore_prompt()">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>restore_prompt</h4>
-<pre>public&nbsp;varargs&nbsp;void&nbsp;restore_prompt(object&nbsp;ob)</pre>
-<div class="block">Restore a connected object's configured prompt.</div>
-<dl>
-<dl>
-<dt><span class="strong">Parameters:</span></dt>
-<dd><code>ob</code> - the connected object, defaults to THISO </dd>
 </dl>
 </li>
 </ul>
@@ -242,7 +242,7 @@ specified session will then become a "connected" session.</div>
 </a><a href="#skip-navbar_bottom" title="Skip navigation links"></a><a name="navbar_">
 </a>
 <ul class="navList" title="Navigation">
-<div class="aboutLanguage"><em><strong>gabbo mudlib foundation<br/>version 0.1</strong></em></div>
+<div class="aboutLanguage"><em><strong>Acme MUD<br/>version 0.1</strong></em></div>
 </ul>
 </div>
 <div class="subNav">

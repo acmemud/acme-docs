@@ -9,7 +9,7 @@
 </a><a href="#skip-navbar_top" title="Skip navigation links"></a><a name="navbar_">
 </a>
 <ul class="navList" title="Navigation">
-<div class="aboutLanguage"><em><strong>gabbo mudlib foundation<br/>version 0.1</strong></em></div>
+<div class="aboutLanguage"><em><strong>Acme MUD<br/>version 0.1</strong></em></div>
 </ul>
 </div>
 <div class="subNav">
@@ -64,12 +64,20 @@
 <dt>All Inherited Programs:</dt>
 <dd>
 <ul class="tree"><li class="last"><a href="../../../platform/.lib/user.html" title="">UserLib </a>
-<ul class="tree"><li><a href="../../../platform/.lib/file.html" title="">FileLib </a>
-</li><li><a href="../../../platform/.lib/connection.html" title="">ConnectionLib </a>
-<ul class="tree"><li class="last"><a href="../../../platform/.lib/object.html" title="">ObjectLib </a>
-</li></ul></li><li><a href="../../../platform/.lib/session.html" title="">SessionLib </a>
-</li><li class="last"><a href="../../...html" title=""></a>
-</li></ul></li></ul></dd>
+<ul class="tree"><li><a href="../../../platform/.lib/file.html" title="">FileLib </a>&nbsp;[private]
+</li><li><a href="../../../platform/.lib/connection.html" title="">ConnectionLib </a>&nbsp;[private]
+<ul class="tree"><li class="last"><a href="../../../platform/.lib/capability.html" title="">CapabilityLib </a>&nbsp;[private]
+</li></ul></li><li><a href="../../../platform/.lib/session.html" title="">SessionLib </a>&nbsp;[private]
+</li><li class="last"><a href="../../../platform/.lib/format_string.html" title="">FormatStringLib </a>&nbsp;[private]
+<ul class="tree"><li><a href="../../../platform/.lib/argument.html" title="">ArgumentLib </a>&nbsp;[private]
+<ul class="tree"><li><a href="../../../platform/.lib/string.html" title="">StringLib </a>&nbsp;[private]
+<ul class="tree"><li class="last"><a href="../../../platform/.lib/array.html" title="">ArrayLib </a>&nbsp;[private]
+</li></ul></li><li class="last"><a href="../../../platform/.lib/array.html" title="">ArrayLib </a>&nbsp;[private]
+</li></ul></li><li><a href="../../../platform/.lib/array.html" title="">ArrayLib </a>&nbsp;[private]
+</li><li><a href="../../../platform/.lib/string.html" title="">StringLib </a>&nbsp;[private]
+<ul class="tree"><li class="last"><a href="../../../platform/.lib/array.html" title="">ArrayLib </a>&nbsp;[private]
+</li></ul></li><li class="last"><a href="../../../platform/.lib/closure.html" title="">ClosureLib </a>&nbsp;[private]
+</li></ul></li></ul></li></ul></dd>
 </dl>
 <hr>
 <br>
@@ -131,49 +139,49 @@
 <th class="colFirst" scope="col">Modifier and Type</th>
 <th class="colLast" scope="col">Function and Description</th>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>public&nbsp;void&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../../platform/.obj/tracker/user.html#create()">create</a></strong>()</code>
 <div class="block">Constructor.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>public&nbsp;string&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../../platform/.obj/tracker/user.html#generate_id()">generate_id</a></strong>()</code>
 <div class="block">Generate a new, unique user id.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>public&nbsp;string&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../../platform/.obj/tracker/user.html#new_user()">new_user</a></strong>(string&nbsp;username)</code>
 <div class="block">Invoked to track a new user.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>public&nbsp;string&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../../platform/.obj/tracker/user.html#query_last_session()">query_last_session</a></strong>(string&nbsp;user_id)</code>
 <div class="block">Get a user's last (or current) session.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>public&nbsp;string&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../../platform/.obj/tracker/user.html#query_username()">query_username</a></strong>(string&nbsp;user_id)</code>
 <div class="block">Get the username for a given user id.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>public&nbsp;mapping&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../../platform/.obj/tracker/user.html#query_users()">query_users</a></strong>(string&nbsp;username)</code>
 <div class="block">Get the users associated with a given username.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>public&nbsp;int&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../../platform/.obj/tracker/user.html#set_last_session()">set_last_session</a></strong>(string&nbsp;user_id,&nbsp;string&nbsp;session_id)</code>
 <div class="block">Set a user's last (or current) session.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>public&nbsp;void&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../../platform/.obj/tracker/user.html#setup()">setup</a></strong>()</code>
 <div class="block">Setup the UserTracker.</div>
@@ -202,10 +210,10 @@
 
 </ul>
 <ul class="blockList">
-<li class="blockList"><a name="methods_inherited_from_class_/platform/.lib/object">
+<li class="blockList"><a name="methods_inherited_from_class_/platform/.lib/capability">
 </a>
-<h3>Functions inherited from program&nbsp;<a href="../../../platform/.lib/object.html" title="program /platform/.lib/object">ObjectLib </a></h3>
-<code><a href="../../../platform/.lib/object.html#get_path_info()">get_path_info</a>, <a href="../../../platform/.lib/object.html#is_reachable()">is_reachable</a>, <a href="../../../platform/.lib/object.html#reload_object()">reload_object</a></code></li>
+<h3>Functions inherited from program&nbsp;<a href="../../../platform/.lib/capability.html" title="program /platform/.lib/capability">CapabilityLib </a></h3>
+<code><a href="../../../platform/.lib/capability.html#is_capable()">is_capable</a></code></li>
 
 </ul>
 <ul class="blockList">
@@ -213,6 +221,41 @@
 </a>
 <h3>Functions inherited from program&nbsp;<a href="../../../platform/.lib/session.html" title="program /platform/.lib/session">SessionLib </a></h3>
 <code><a href="../../../platform/.lib/session.html#is_active()">is_active</a>, <a href="../../../platform/.lib/session.html#is_subsession()">is_subsession</a></code></li>
+
+</ul>
+<ul class="blockList">
+<li class="blockList"><a name="methods_inherited_from_class_/platform/.lib/format_string">
+</a>
+<h3>Functions inherited from program&nbsp;<a href="../../../platform/.lib/format_string.html" title="program /platform/.lib/format_string">FormatStringLib </a></h3>
+<code><a href="../../../platform/.lib/format_string.html#explode_format()">explode_format</a>, <a href="../../../platform/.lib/format_string.html#parse_format()">parse_format</a></code></li>
+
+</ul>
+<ul class="blockList">
+<li class="blockList"><a name="methods_inherited_from_class_/platform/.lib/argument">
+</a>
+<h3>Functions inherited from program&nbsp;<a href="../../../platform/.lib/argument.html" title="program /platform/.lib/argument">ArgumentLib </a></h3>
+<code><a href="../../../platform/.lib/argument.html#explode_args()">explode_args</a>, <a href="../../../platform/.lib/argument.html#explode_nested()">explode_nested</a>, <a href="../../../platform/.lib/argument.html#explode_unescaped()">explode_unescaped</a>, <a href="../../../platform/.lib/argument.html#find_close_char()">find_close_char</a></code></li>
+
+</ul>
+<ul class="blockList">
+<li class="blockList"><a name="methods_inherited_from_class_/platform/.lib/string">
+</a>
+<h3>Functions inherited from program&nbsp;<a href="../../../platform/.lib/string.html" title="program /platform/.lib/string">StringLib </a></h3>
+<code><a href="../../../platform/.lib/string.html#crop_string()">crop_string</a>, <a href="../../../platform/.lib/string.html#find_nonws()">find_nonws</a>, <a href="../../../platform/.lib/string.html#is_escaped()">is_escaped</a>, <a href="../../../platform/.lib/string.html#match_quote()">match_quote</a>, <a href="../../../platform/.lib/string.html#search_str_unescaped()">search_str_unescaped</a>, <a href="../../../platform/.lib/string.html#unescape()">unescape</a>, <a href="../../../platform/.lib/string.html#unquote()">unquote</a></code></li>
+
+</ul>
+<ul class="blockList">
+<li class="blockList"><a name="methods_inherited_from_class_/platform/.lib/array">
+</a>
+<h3>Functions inherited from program&nbsp;<a href="../../../platform/.lib/array.html" title="program /platform/.lib/array">ArrayLib </a></h3>
+<code><a href="../../../platform/.lib/array.html#anti_searcha()">anti_searcha</a>, <a href="../../../platform/.lib/array.html#anti_searcha_any()">anti_searcha_any</a>, <a href="../../../platform/.lib/array.html#deep_flatten_array()">deep_flatten_array</a>, <a href="../../../platform/.lib/array.html#flatten_array()">flatten_array</a>, <a href="../../../platform/.lib/array.html#m_value()">m_value</a>, <a href="../../../platform/.lib/array.html#mapping_array()">mapping_array</a>, <a href="../../../platform/.lib/array.html#random_key()">random_key</a>, <a href="../../../platform/.lib/array.html#reduce()">reduce</a>, <a href="../../../platform/.lib/array.html#searcha()">searcha</a>, <a href="../../../platform/.lib/array.html#searcha_any()">searcha_any</a>, <a href="../../../platform/.lib/array.html#unique_array()">unique_array</a></code></li>
+
+</ul>
+<ul class="blockList">
+<li class="blockList"><a name="methods_inherited_from_class_/platform/.lib/closure">
+</a>
+<h3>Functions inherited from program&nbsp;<a href="../../../platform/.lib/closure.html" title="program /platform/.lib/closure">ClosureLib </a></h3>
+<code><a href="../../../platform/.lib/closure.html#reconstruct_lambda()">reconstruct_lambda</a></code></li>
 
 </ul>
 
@@ -404,7 +447,7 @@
 </a><a href="#skip-navbar_bottom" title="Skip navigation links"></a><a name="navbar_">
 </a>
 <ul class="navList" title="Navigation">
-<div class="aboutLanguage"><em><strong>gabbo mudlib foundation<br/>version 0.1</strong></em></div>
+<div class="aboutLanguage"><em><strong>Acme MUD<br/>version 0.1</strong></em></div>
 </ul>
 </div>
 <div class="subNav">

@@ -9,7 +9,7 @@
 </a><a href="#skip-navbar_top" title="Skip navigation links"></a><a name="navbar_">
 </a>
 <ul class="navList" title="Navigation">
-<div class="aboutLanguage"><em><strong>gabbo mudlib foundation<br/>version 0.1</strong></em></div>
+<div class="aboutLanguage"><em><strong>Acme MUD<br/>version 0.1</strong></em></div>
 </ul>
 </div>
 <div class="subNav">
@@ -63,11 +63,16 @@
 <dl>
 <dt>All Inherited Programs:</dt>
 <dd>
-<ul class="tree"><li class="last"><a href="../../../platform/.lib/expand_object.html" title="">ObjectExpansionLib </a>&nbsp;[private&nbsp;variables&nbsp;private&nbsp;functions]
-<ul class="tree"><li><a href="../../../platform/.lib/array.html" title="">ArrayLib </a>&nbsp;[private&nbsp;variables&nbsp;private&nbsp;functions]
-</li><li><a href="../../../platform/.lib/file.html" title="">FileLib </a>&nbsp;[private&nbsp;variables&nbsp;private&nbsp;functions]
-</li><li class="last"><a href="../../...html" title=""></a>&nbsp;[private&nbsp;variables&nbsp;private&nbsp;functions]
-</li></ul></li></ul></dd>
+<ul class="tree"><li class="last"><a href="../../../platform/.lib/expand_object.html" title="">ObjectExpansionLib </a>&nbsp;[private]
+<ul class="tree"><li><a href="../../../platform/.lib/array.html" title="">ArrayLib </a>&nbsp;[private]
+</li><li><a href="../../../platform/.lib/argument.html" title="">ArgumentLib </a>&nbsp;[private]
+<ul class="tree"><li><a href="../../../platform/.lib/string.html" title="">StringLib </a>&nbsp;[private]
+<ul class="tree"><li class="last"><a href="../../../platform/.lib/array.html" title="">ArrayLib </a>&nbsp;[private]
+</li></ul></li><li class="last"><a href="../../../platform/.lib/array.html" title="">ArrayLib </a>&nbsp;[private]
+</li></ul></li><li><a href="../../../platform/.lib/file.html" title="">FileLib </a>&nbsp;[private]
+</li><li class="last"><a href="../../../platform/.lib/string.html" title="">StringLib </a>&nbsp;[private]
+<ul class="tree"><li class="last"><a href="../../../platform/.lib/array.html" title="">ArrayLib </a>&nbsp;[private]
+</li></ul></li></ul></li></ul></dd>
 </dl>
 <hr>
 <br>
@@ -85,6 +90,28 @@ accessed through LoggerFactory->get_logger().</div>
 <div class="summary">
 <ul class="blockList">
 <li class="blockList">
+<!-- =========== FIELD SUMMARY =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="field_summary">
+<!--   -->
+</a>
+<h3>Variable Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Variable Summary table, listing fields, and an explanation">
+<caption><span>Variables</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Variable and Description</th>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>public&nbsp;int&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../..//platform/.obj/logger/logger.html#logging = 0">logging = 0</strong></code>
+<div class="block"></div>
+</td>
+</tr>
+</table>
+
+</li>
+</ul>
 <!-- ========== METHOD SUMMARY =========== -->
 <ul class="blockList">
 <li class="blockList"><a name="method_summary">
@@ -97,149 +124,155 @@ accessed through LoggerFactory->get_logger().</div>
 <th class="colFirst" scope="col">Modifier and Type</th>
 <th class="colLast" scope="col">Function and Description</th>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>public&nbsp;void&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../../platform/.obj/logger/logger.html#create()">create</a></strong>()</code>
 <div class="block"></div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>public&nbsp;void&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../../platform/.obj/logger/logger.html#debug()">debug</a></strong>(string&nbsp;msg_fmt,&nbsp;varargs string *args)</code>
 <div class="block">Record a log message with the DEBUG priority.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>public&nbsp;void&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../../platform/.obj/logger/logger.html#error()">error</a></strong>(string&nbsp;msg_fmt,&nbsp;varargs string *args)</code>
 <div class="block">Record a log message with the ERROR priority.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>public&nbsp;void&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../../platform/.obj/logger/logger.html#fatal()">fatal</a></strong>(string&nbsp;msg_fmt,&nbsp;varargs string *args)</code>
 <div class="block">Record a log message with the FATAL priority.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>public&nbsp;void&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../../platform/.obj/logger/logger.html#info()">info</a></strong>(string&nbsp;msg_fmt,&nbsp;varargs string *args)</code>
 <div class="block">Record a log message with the INFO priority.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>public&nbsp;int&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../../platform/.obj/logger/logger.html#is_debug_enabled()">is_debug_enabled</a></strong>()</code>
 <div class="block">Test whether logging is enabled for DEBUG events.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>public&nbsp;int&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../../platform/.obj/logger/logger.html#is_enabled()">is_enabled</a></strong>(string&nbsp;priority)</code>
 <div class="block">Test whether logging is enabled for a specified priority.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>public&nbsp;int&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../../platform/.obj/logger/logger.html#is_error_enabled()">is_error_enabled</a></strong>()</code>
 <div class="block">Test whether logging is enabled for ERROR events.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>public&nbsp;int&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../../platform/.obj/logger/logger.html#is_fatal_enabled()">is_fatal_enabled</a></strong>()</code>
 <div class="block">Test whether logging is enabled for FATAL events.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>public&nbsp;int&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../../platform/.obj/logger/logger.html#is_info_enabled()">is_info_enabled</a></strong>()</code>
 <div class="block">Test whether logging is enabled for INFO events.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>public&nbsp;int&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../../platform/.obj/logger/logger.html#is_muted()">is_muted</a></strong>(string&nbsp;program,&nbsp;int&nbsp;line)</code>
 <div class="block">Test whether a specified line and compilation unit should be muted from
 logging.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>public&nbsp;int&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../../platform/.obj/logger/logger.html#is_trace_enabled()">is_trace_enabled</a></strong>()</code>
 <div class="block">Test whether logging is enabled for TRACE events.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>public&nbsp;int&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../../platform/.obj/logger/logger.html#is_warn_enabled()">is_warn_enabled</a></strong>()</code>
 <div class="block">Test whether logging is enabled for WARN events.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>public&nbsp;void&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../../platform/.obj/logger/logger.html#log()">log</a></strong>(string&nbsp;priority,&nbsp;string&nbsp;msg_fmt,&nbsp;varargs string *args)</code>
 <div class="block">Record a log message with the specified priority.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>public&nbsp;varargs&nbsp;int&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../../platform/.obj/logger/logger.html#mute()">mute</a></strong>(string&nbsp;program,&nbsp;int&nbsp;line)</code>
 <div class="block">Mute logging for a specified compilation unit.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>public&nbsp;closure&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../../platform/.obj/logger/logger.html#query_formatter()">query_formatter</a></strong>()</code>
 <div class="block">Get the closure which will be used to format logging events for output.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>public&nbsp;string&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../../platform/.obj/logger/logger.html#query_level()">query_level</a></strong>()</code>
 <div class="block">Get the minimum level for which messages will be output.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>public&nbsp;mapping&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../../platform/.obj/logger/logger.html#query_muted()">query_muted</a></strong>()</code>
 <div class="block">Returns the muted mapping.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>public&nbsp;mixed&nbsp;*</code></td>
 <td class="colLast"><code><strong><a href="../../../platform/.obj/logger/logger.html#query_output()">query_output</a></strong>()</code>
 <div class="block">Get the output specs.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>public&nbsp;string&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../../platform/.obj/logger/logger.html#query_zone()">query_zone</a></strong>()</code>
 <div class="block">Get the logger's zone.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>public&nbsp;int&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../../platform/.obj/logger/logger.html#set_formatter()">set_formatter</a></strong>(closure&nbsp;cl)</code>
 <div class="block">Set the formatter.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>public&nbsp;int&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../../platform/.obj/logger/logger.html#set_level()">set_level</a></strong>(string&nbsp;str)</code>
 <div class="block"></div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>public&nbsp;int&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../../platform/.obj/logger/logger.html#set_output()">set_output</a></strong>(mixed *arr)</code>
 <div class="block">Set the logger output target list.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>public&nbsp;int&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../../platform/.obj/logger/logger.html#set_zone()">set_zone</a></strong>(string&nbsp;str)</code>
 <div class="block">Set the logger zone.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>public&nbsp;void&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../platform/.obj/logger/logger.html#setup()">setup</a></strong>()</code>
+<div class="block">Setup the Logger.</div>
 </td>
 </tr>
 <tr class="altColor">
@@ -261,6 +294,41 @@ logging.</div>
 </td>
 </tr>
 </table>
+<ul class="blockList">
+<li class="blockList"><a name="methods_inherited_from_class_/platform/.lib/expand_object">
+</a>
+<h3>Functions inherited from program&nbsp;<a href="../../../platform/.lib/expand_object.html" title="program /platform/.lib/expand_object">ObjectExpansionLib </a></h3>
+<code><a href="../../../platform/.lib/expand_object.html#expand_destination()">expand_destination</a>, <a href="../../../platform/.lib/expand_object.html#expand_objects()">expand_objects</a></code></li>
+
+</ul>
+<ul class="blockList">
+<li class="blockList"><a name="methods_inherited_from_class_/platform/.lib/array">
+</a>
+<h3>Functions inherited from program&nbsp;<a href="../../../platform/.lib/array.html" title="program /platform/.lib/array">ArrayLib </a></h3>
+<code><a href="../../../platform/.lib/array.html#anti_searcha()">anti_searcha</a>, <a href="../../../platform/.lib/array.html#anti_searcha_any()">anti_searcha_any</a>, <a href="../../../platform/.lib/array.html#deep_flatten_array()">deep_flatten_array</a>, <a href="../../../platform/.lib/array.html#flatten_array()">flatten_array</a>, <a href="../../../platform/.lib/array.html#m_value()">m_value</a>, <a href="../../../platform/.lib/array.html#mapping_array()">mapping_array</a>, <a href="../../../platform/.lib/array.html#random_key()">random_key</a>, <a href="../../../platform/.lib/array.html#reduce()">reduce</a>, <a href="../../../platform/.lib/array.html#searcha()">searcha</a>, <a href="../../../platform/.lib/array.html#searcha_any()">searcha_any</a>, <a href="../../../platform/.lib/array.html#unique_array()">unique_array</a></code></li>
+
+</ul>
+<ul class="blockList">
+<li class="blockList"><a name="methods_inherited_from_class_/platform/.lib/argument">
+</a>
+<h3>Functions inherited from program&nbsp;<a href="../../../platform/.lib/argument.html" title="program /platform/.lib/argument">ArgumentLib </a></h3>
+<code><a href="../../../platform/.lib/argument.html#explode_args()">explode_args</a>, <a href="../../../platform/.lib/argument.html#explode_nested()">explode_nested</a>, <a href="../../../platform/.lib/argument.html#explode_unescaped()">explode_unescaped</a>, <a href="../../../platform/.lib/argument.html#find_close_char()">find_close_char</a></code></li>
+
+</ul>
+<ul class="blockList">
+<li class="blockList"><a name="methods_inherited_from_class_/platform/.lib/string">
+</a>
+<h3>Functions inherited from program&nbsp;<a href="../../../platform/.lib/string.html" title="program /platform/.lib/string">StringLib </a></h3>
+<code><a href="../../../platform/.lib/string.html#crop_string()">crop_string</a>, <a href="../../../platform/.lib/string.html#find_nonws()">find_nonws</a>, <a href="../../../platform/.lib/string.html#is_escaped()">is_escaped</a>, <a href="../../../platform/.lib/string.html#match_quote()">match_quote</a>, <a href="../../../platform/.lib/string.html#search_str_unescaped()">search_str_unescaped</a>, <a href="../../../platform/.lib/string.html#unescape()">unescape</a>, <a href="../../../platform/.lib/string.html#unquote()">unquote</a></code></li>
+
+</ul>
+<ul class="blockList">
+<li class="blockList"><a name="methods_inherited_from_class_/platform/.lib/file">
+</a>
+<h3>Functions inherited from program&nbsp;<a href="../../../platform/.lib/file.html" title="program /platform/.lib/file">FileLib </a></h3>
+<code><a href="../../../platform/.lib/file.html#basename()">basename</a>, <a href="../../../platform/.lib/file.html#copy_tree()">copy_tree</a>, <a href="../../../platform/.lib/file.html#dirname()">dirname</a>, <a href="../../../platform/.lib/file.html#expand_path()">expand_path</a>, <a href="../../../platform/.lib/file.html#expand_pattern()">expand_pattern</a>, <a href="../../../platform/.lib/file.html#file_exists()">file_exists</a>, <a href="../../../platform/.lib/file.html#is_directory()">is_directory</a>, <a href="../../../platform/.lib/file.html#is_loadable()">is_loadable</a>, <a href="../../../platform/.lib/file.html#is_special_dir()">is_special_dir</a>, <a href="../../../platform/.lib/file.html#munge_filename()">munge_filename</a>, <a href="../../../platform/.lib/file.html#read_value()">read_value</a>, <a href="../../../platform/.lib/file.html#traverse_tree()">traverse_tree</a>, <a href="../../../platform/.lib/file.html#write_value()">write_value</a></code></li>
+
+</ul>
 
 </li>
 </ul>
@@ -270,12 +338,43 @@ logging.</div>
 <div class="details">
 <ul class="blockList">
 <li class="blockList">
+<!-- ============ FIELD DETAIL =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="field_detail">
+<!--   -->
+</a>
+<h3>Variable Detail</h3>
+<a name="logging = 0">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>logging = 0</h4>
+<pre>public&nbsp;int&nbsp;logging = 0</pre>
+<div class="block"></div>
+</li>
+</ul>
+</li>
+</ul>
 <!-- ============ METHOD DETAIL ========== -->
 <ul class="blockList">
 <li class="blockList"><a name="method_detail">
 <!--   -->
 </a>
 <h3>Function Detail</h3>
+<a name="setup()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setup</h4>
+<pre>public&nbsp;void&nbsp;setup()</pre>
+<div class="block">Setup the Logger.</div>
+<dl>
+<dl>
+</dl>
+</li>
+</ul>
 <a name="query_zone()">
 <!--   -->
 </a>
@@ -711,7 +810,7 @@ logging.</div>
 </a><a href="#skip-navbar_bottom" title="Skip navigation links"></a><a name="navbar_">
 </a>
 <ul class="navList" title="Navigation">
-<div class="aboutLanguage"><em><strong>gabbo mudlib foundation<br/>version 0.1</strong></em></div>
+<div class="aboutLanguage"><em><strong>Acme MUD<br/>version 0.1</strong></em></div>
 </ul>
 </div>
 <div class="subNav">

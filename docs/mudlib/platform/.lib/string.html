@@ -9,7 +9,7 @@
 </a><a href="#skip-navbar_top" title="Skip navigation links"></a><a name="navbar_">
 </a>
 <ul class="navList" title="Navigation">
-<div class="aboutLanguage"><em><strong>gabbo mudlib foundation<br/>version 0.1</strong></em></div>
+<div class="aboutLanguage"><em><strong>Acme MUD<br/>version 0.1</strong></em></div>
 </ul>
 </div>
 <div class="subNav">
@@ -63,7 +63,7 @@
 <dl>
 <dt>All Inherited Programs:</dt>
 <dd>
-<ul class="tree"><li class="last"><a href="../../platform/.lib/array.html" title="">ArrayLib </a>
+<ul class="tree"><li class="last"><a href="../../platform/.lib/array.html" title="">ArrayLib </a>&nbsp;[private]
 </li></ul></dd>
 </dl>
 <hr>
@@ -93,33 +93,45 @@
 <th class="colLast" scope="col">Function and Description</th>
 </tr>
 <tr class="rowColor">
-<td class="colFirst"><code>public&nbsp;varargs&nbsp;int&nbsp;</code></td>
+<td class="colFirst"><code>protected&nbsp;string&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../platform/.lib/string.html#crop_string()">crop_string</a></strong>(string&nbsp;str,&nbsp;int&nbsp;length)</code>
+<div class="block">Crop a string, adding an elipsis if necessary.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>protected&nbsp;varargs&nbsp;int&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../platform/.lib/string.html#find_nonws()">find_nonws</a></strong>(string&nbsp;str,&nbsp;int&nbsp;start)</code>
 <div class="block">Find the first non-space character in a string.</div>
 </td>
 </tr>
-<tr class="altColor">
-<td class="colFirst"><code>public&nbsp;int&nbsp;</code></td>
+<tr class="rowColor">
+<td class="colFirst"><code>protected&nbsp;int&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../platform/.lib/string.html#is_escaped()">is_escaped</a></strong>(string&nbsp;str,&nbsp;int&nbsp;index)</code>
 <div class="block">Test whether a character in string is escaped by a backslash.</div>
 </td>
 </tr>
-<tr class="rowColor">
-<td class="colFirst"><code>public&nbsp;varargs&nbsp;int&nbsp;</code></td>
+<tr class="altColor">
+<td class="colFirst"><code>protected&nbsp;varargs&nbsp;int&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../platform/.lib/string.html#match_quote()">match_quote</a></strong>(string&nbsp;str,&nbsp;int&nbsp;start,&nbsp;string&nbsp;quote_chars)</code>
 <div class="block">Find the index of the last character in a possibly quoted string.</div>
 </td>
 </tr>
-<tr class="altColor">
-<td class="colFirst"><code>public&nbsp;varargs&nbsp;int&nbsp;</code></td>
+<tr class="rowColor">
+<td class="colFirst"><code>protected&nbsp;varargs&nbsp;int&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../platform/.lib/string.html#search_str_unescaped()">search_str_unescaped</a></strong>(string&nbsp;str,&nbsp;int&nbsp;el,&nbsp;int&nbsp;pos,&nbsp;int&nbsp;step)</code>
 <div class="block">Search a string for a character, ignoring escaped characters.</div>
 </td>
 </tr>
-<tr class="rowColor">
-<td class="colFirst"><code>public&nbsp;string&nbsp;</code></td>
+<tr class="altColor">
+<td class="colFirst"><code>protected&nbsp;string&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../platform/.lib/string.html#unescape()">unescape</a></strong>(string&nbsp;str)</code>
 <div class="block">Unescape all characters in a string by one level.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>protected&nbsp;varargs&nbsp;string&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../platform/.lib/string.html#unquote()">unquote</a></strong>(string&nbsp;str,&nbsp;string&nbsp;quote_chars)</code>
+<div class="block">Removes the outer layer of quotes, if there is one.</div>
 </td>
 </tr>
 </table>
@@ -145,13 +157,47 @@
 <!--   -->
 </a>
 <h3>Function Detail</h3>
+<a name="unquote()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>unquote</h4>
+<pre>protected&nbsp;varargs&nbsp;string&nbsp;unquote(string&nbsp;str,&nbsp;string&nbsp;quote_chars)</pre>
+<div class="block">Removes the outer layer of quotes, if there is one.</div>
+<dl>
+<dl>
+<dt><span class="strong">Parameters:</span></dt>
+<dd><code>str</code> - the potentially quoted string </dd>
+<dd><code>quote_chars</code> - an optional string containing quote characters, defaults to "\"'" </dd>
+<dt><span class="strong">Returns:</span></dt><dd>the unquoted string </dd>
+</dl>
+</li>
+</ul>
+<a name="crop_string()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>crop_string</h4>
+<pre>protected&nbsp;string&nbsp;crop_string(string&nbsp;str,&nbsp;int&nbsp;length)</pre>
+<div class="block">Crop a string, adding an elipsis if necessary.</div>
+<dl>
+<dl>
+<dt><span class="strong">Parameters:</span></dt>
+<dd><code>str</code> - the string to crop </dd>
+<dd><code>length</code> - the desired string length </dd>
+<dt><span class="strong">Returns:</span></dt><dd>the original string, or a truncated string with trailng elipsis </dd>
+</dl>
+</li>
+</ul>
 <a name="find_nonws()">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
 <h4>find_nonws</h4>
-<pre>public&nbsp;varargs&nbsp;int&nbsp;find_nonws(string&nbsp;str,&nbsp;int&nbsp;start)</pre>
+<pre>protected&nbsp;varargs&nbsp;int&nbsp;find_nonws(string&nbsp;str,&nbsp;int&nbsp;start)</pre>
 <div class="block">Find the first non-space character in a string.
 Note: functionally equivilent to ArrayLib->anti_search(str, ' ', start),
 but optimized for speed.</div>
@@ -170,7 +216,7 @@ but optimized for speed.</div>
 <ul class="blockList">
 <li class="blockList">
 <h4>is_escaped</h4>
-<pre>public&nbsp;int&nbsp;is_escaped(string&nbsp;str,&nbsp;int&nbsp;index)</pre>
+<pre>protected&nbsp;int&nbsp;is_escaped(string&nbsp;str,&nbsp;int&nbsp;index)</pre>
 <div class="block">Test whether a character in string is escaped by a backslash.</div>
 <dl>
 <dl>
@@ -187,7 +233,7 @@ but optimized for speed.</div>
 <ul class="blockList">
 <li class="blockList">
 <h4>search_str_unescaped</h4>
-<pre>public&nbsp;varargs&nbsp;int&nbsp;search_str_unescaped(string&nbsp;str,&nbsp;int&nbsp;el,&nbsp;int&nbsp;pos,&nbsp;int&nbsp;step)</pre>
+<pre>protected&nbsp;varargs&nbsp;int&nbsp;search_str_unescaped(string&nbsp;str,&nbsp;int&nbsp;el,&nbsp;int&nbsp;pos,&nbsp;int&nbsp;step)</pre>
 <div class="block">Search a string for a character, ignoring escaped characters.</div>
 <dl>
 <dl>
@@ -206,7 +252,7 @@ but optimized for speed.</div>
 <ul class="blockList">
 <li class="blockList">
 <h4>match_quote</h4>
-<pre>public&nbsp;varargs&nbsp;int&nbsp;match_quote(string&nbsp;str,&nbsp;int&nbsp;start,&nbsp;string&nbsp;quote_chars)</pre>
+<pre>protected&nbsp;varargs&nbsp;int&nbsp;match_quote(string&nbsp;str,&nbsp;int&nbsp;start,&nbsp;string&nbsp;quote_chars)</pre>
 <div class="block">Find the index of the last character in a possibly quoted string.</div>
 <dl>
 <dl>
@@ -224,7 +270,7 @@ but optimized for speed.</div>
 <ul class="blockList">
 <li class="blockList">
 <h4>unescape</h4>
-<pre>public&nbsp;string&nbsp;unescape(string&nbsp;str)</pre>
+<pre>protected&nbsp;string&nbsp;unescape(string&nbsp;str)</pre>
 <div class="block">Unescape all characters in a string by one level.
 <p>Note: This deals with literal backslashes only.  In the examples, and ind
 the strings this function is meant to deal with "\a" is meant to represent
@@ -253,7 +299,7 @@ containing a single '\a' character.</div>
 </a><a href="#skip-navbar_bottom" title="Skip navigation links"></a><a name="navbar_">
 </a>
 <ul class="navList" title="Navigation">
-<div class="aboutLanguage"><em><strong>gabbo mudlib foundation<br/>version 0.1</strong></em></div>
+<div class="aboutLanguage"><em><strong>Acme MUD<br/>version 0.1</strong></em></div>
 </ul>
 </div>
 <div class="subNav">

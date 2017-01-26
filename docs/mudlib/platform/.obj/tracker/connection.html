@@ -9,7 +9,7 @@
 </a><a href="#skip-navbar_top" title="Skip navigation links"></a><a name="navbar_">
 </a>
 <ul class="navList" title="Navigation">
-<div class="aboutLanguage"><em><strong>gabbo mudlib foundation<br/>version 0.1</strong></em></div>
+<div class="aboutLanguage"><em><strong>Acme MUD<br/>version 0.1</strong></em></div>
 </ul>
 </div>
 <div class="subNav">
@@ -65,7 +65,7 @@
 <dd>
 <ul class="tree"><li><a href="../../../platform/.module/sql.html" title="">SqlMixin </a>
 </li><li class="last"><a href="../../../platform/.lib/connection.html" title="">ConnectionLib </a>
-<ul class="tree"><li class="last"><a href="../../../platform/.lib/object.html" title="">ObjectLib </a>
+<ul class="tree"><li class="last"><a href="../../../platform/.lib/capability.html" title="">CapabilityLib </a>&nbsp;[private]
 </li></ul></li></ul></dd>
 </dl>
 <hr>
@@ -83,23 +83,6 @@ exec calls, and handles all telnet negotiations.</div>
 <div class="summary">
 <ul class="blockList">
 <li class="blockList">
-<!-- =========== FIELD SUMMARY =========== -->
-<ul class="blockList">
-<li class="blockList"><a name="field_summary">
-<!--   -->
-</a>
-<h3>Variable Summary</h3>
-<ul class="blockList">
-
-<li class="blockList"><a name="fields_inherited_from_class_/platform/.module/sql">
-</a>
-<h3>Variables inherited from program&nbsp;<a href="../../../platform/.module/sql.html" title="program /platform/.module/sql">SqlMixin </a></h3>
-<code><a href="../../../platform/.module/sql.html#database">database</a></code></li>
-
-</ul>
-
-</li>
-</ul>
 <!-- ========== METHOD SUMMARY =========== -->
 <ul class="blockList">
 <li class="blockList"><a name="method_summary">
@@ -112,53 +95,59 @@ exec calls, and handles all telnet negotiations.</div>
 <th class="colFirst" scope="col">Modifier and Type</th>
 <th class="colLast" scope="col">Function and Description</th>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>public&nbsp;void&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../../platform/.obj/tracker/connection.html#create()">create</a></strong>()</code>
 <div class="block">Constructor.</div>
 </td>
 </tr>
-<tr class="altColor">
-<td class="colFirst"><code>public&nbsp;string&nbsp;</code></td>
+<tr class="rowColor">
+<td class="colFirst"><code>protected&nbsp;string&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../../platform/.obj/tracker/connection.html#generate_id()">generate_id</a></strong>()</code>
 <div class="block">Generate a new, unique connection id.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>public&nbsp;string&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../../platform/.obj/tracker/connection.html#new_connection()">new_connection</a></strong>(object&nbsp;interactive)</code>
 <div class="block">Invoked when a new connection is established with the interactive object
 doing the connecting.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>public&nbsp;string&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../../platform/.obj/tracker/connection.html#query_connection()">query_connection</a></strong>(object&nbsp;interactive)</code>
 <div class="block">Get the connection for an interactive object.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>public&nbsp;int&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../../platform/.obj/tracker/connection.html#query_exec_time()">query_exec_time</a></strong>(string&nbsp;connection_id)</code>
 <div class="block">Get the exec time for a connection.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>public&nbsp;object&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../../platform/.obj/tracker/connection.html#query_interactive()">query_interactive</a></strong>(string&nbsp;connection_id)</code>
 <div class="block">Get the interactive object associated with a connection.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>public&nbsp;int&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../../platform/.obj/tracker/connection.html#set_interactive()">set_interactive</a></strong>(string&nbsp;connection_id,&nbsp;object&nbsp;interactive)</code>
 <div class="block">Change the interactive object associated with a connection.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>public&nbsp;int&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../../platform/.obj/tracker/connection.html#set_session()">set_session</a></strong>(string&nbsp;connection_id,&nbsp;string&nbsp;session_id)</code>
 <div class="block">Set the session associated with a connection.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>public&nbsp;void&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../platform/.obj/tracker/connection.html#setup()">setup</a></strong>()</code>
+<div class="block">Setup the ConnectionTracker.</div>
 </td>
 </tr>
 <tr class="rowColor">
@@ -181,12 +170,6 @@ doing the connecting.</div>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>public&nbsp;void&nbsp;</code></td>
-<td class="colLast"><code><strong><a href="../../../platform/.obj/tracker/connection.html#telnet_neg_log()">telnet_neg_log</a></strong>(string&nbsp;s)</code>
-<div class="block"></div>
-</td>
-</tr>
-<tr class="rowColor">
-<td class="colFirst"><code>public&nbsp;void&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../../platform/.obj/tracker/connection.html#telnet_negotiation()">telnet_negotiation</a></strong>(object&nbsp;interactive,&nbsp;int&nbsp;cmd,&nbsp;int&nbsp;opt,&nbsp;int *optargs)</code>
 <div class="block">Handle a telnet negotiation for an interactive.</div>
 </td>
@@ -196,7 +179,7 @@ doing the connecting.</div>
 <li class="blockList"><a name="methods_inherited_from_class_/platform/.module/sql">
 </a>
 <h3>Functions inherited from program&nbsp;<a href="../../../platform/.module/sql.html" title="program /platform/.module/sql">SqlMixin </a></h3>
-<code><a href="../../../platform/.module/sql.html#create_table()">create_table</a>, <a href="../../../platform/.module/sql.html#insert()">insert</a>, <a href="../../../platform/.module/sql.html#query_database()">query_database</a>, <a href="../../../platform/.module/sql.html#select()">select</a>, <a href="../../../platform/.module/sql.html#set_database()">set_database</a>, <a href="../../../platform/.module/sql.html#setup()">setup</a>, <a href="../../../platform/.module/sql.html#table_info()">table_info</a>, <a href="../../../platform/.module/sql.html#update()">update</a></code></li>
+<code><a href="../../../platform/.module/sql.html#create_table()">create_table</a>, <a href="../../../platform/.module/sql.html#has_sql()">has_sql</a>, <a href="../../../platform/.module/sql.html#insert()">insert</a>, <a href="../../../platform/.module/sql.html#query_database()">query_database</a>, <a href="../../../platform/.module/sql.html#select()">select</a>, <a href="../../../platform/.module/sql.html#set_database()">set_database</a>, <a href="../../../platform/.module/sql.html#setup()">setup</a>, <a href="../../../platform/.module/sql.html#table_info()">table_info</a>, <a href="../../../platform/.module/sql.html#teardown()">teardown</a>, <a href="../../../platform/.module/sql.html#update()">update</a></code></li>
 
 </ul>
 <ul class="blockList">
@@ -207,10 +190,10 @@ doing the connecting.</div>
 
 </ul>
 <ul class="blockList">
-<li class="blockList"><a name="methods_inherited_from_class_/platform/.lib/object">
+<li class="blockList"><a name="methods_inherited_from_class_/platform/.lib/capability">
 </a>
-<h3>Functions inherited from program&nbsp;<a href="../../../platform/.lib/object.html" title="program /platform/.lib/object">ObjectLib </a></h3>
-<code><a href="../../../platform/.lib/object.html#get_path_info()">get_path_info</a>, <a href="../../../platform/.lib/object.html#is_reachable()">is_reachable</a>, <a href="../../../platform/.lib/object.html#reload_object()">reload_object</a></code></li>
+<h3>Functions inherited from program&nbsp;<a href="../../../platform/.lib/capability.html" title="program /platform/.lib/capability">CapabilityLib </a></h3>
+<code><a href="../../../platform/.lib/capability.html#is_capable()">is_capable</a></code></li>
 
 </ul>
 
@@ -228,18 +211,16 @@ doing the connecting.</div>
 <!--   -->
 </a>
 <h3>Function Detail</h3>
-<a name="telnet_neg_log()">
+<a name="setup()">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
-<h4>telnet_neg_log</h4>
-<pre>public&nbsp;void&nbsp;telnet_neg_log(string&nbsp;s)</pre>
-<div class="block"></div>
+<h4>setup</h4>
+<pre>public&nbsp;void&nbsp;setup()</pre>
+<div class="block">Setup the ConnectionTracker.</div>
 <dl>
 <dl>
-<dt><span class="strong">Parameters:</span></dt>
-<dd><code>s</code> - </dd>
 </dl>
 </li>
 </ul>
@@ -414,7 +395,7 @@ doing the connecting.</div>
 <ul class="blockList">
 <li class="blockList">
 <h4>generate_id</h4>
-<pre>public&nbsp;string&nbsp;generate_id()</pre>
+<pre>protected&nbsp;string&nbsp;generate_id()</pre>
 <div class="block">Generate a new, unique connection id.</div>
 <dl>
 <dl>
@@ -450,7 +431,7 @@ doing the connecting.</div>
 </a><a href="#skip-navbar_bottom" title="Skip navigation links"></a><a name="navbar_">
 </a>
 <ul class="navList" title="Navigation">
-<div class="aboutLanguage"><em><strong>gabbo mudlib foundation<br/>version 0.1</strong></em></div>
+<div class="aboutLanguage"><em><strong>Acme MUD<br/>version 0.1</strong></em></div>
 </ul>
 </div>
 <div class="subNav">

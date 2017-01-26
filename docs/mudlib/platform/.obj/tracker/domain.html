@@ -9,7 +9,7 @@
 </a><a href="#skip-navbar_top" title="Skip navigation links"></a><a name="navbar_">
 </a>
 <ul class="navList" title="Navigation">
-<div class="aboutLanguage"><em><strong>gabbo mudlib foundation<br/>version 0.1</strong></em></div>
+<div class="aboutLanguage"><em><strong>Acme MUD<br/>version 0.1</strong></em></div>
 </ul>
 </div>
 <div class="subNav">
@@ -63,8 +63,8 @@
 <dl>
 <dt>All Inherited Programs:</dt>
 <dd>
-<ul class="tree"><li><a href="../../../platform/.lib/file.html" title="">FileLib </a>
-</li><li class="last"><a href="../../../platform/.lib/domain.html" title="">DomainLib </a>
+<ul class="tree"><li><a href="../../../platform/.lib/file.html" title="">FileLib </a>&nbsp;[private]
+</li><li class="last"><a href="../../../platform/.lib/domain.html" title="">DomainLib </a>&nbsp;[private]
 </li></ul></dd>
 </dl>
 <hr>
@@ -81,40 +81,6 @@
 <div class="summary">
 <ul class="blockList">
 <li class="blockList">
-<!-- =========== FIELD SUMMARY =========== -->
-<ul class="blockList">
-<li class="blockList"><a name="field_summary">
-<!--   -->
-</a>
-<h3>Variable Summary</h3>
-<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Variable Summary table, listing fields, and an explanation">
-<caption><span>Variables</span><span class="tabEnd">&nbsp;</span></caption>
-<tr>
-<th class="colFirst" scope="col">Modifier and Type</th>
-<th class="colLast" scope="col">Variable and Description</th>
-</tr>
-<tr class="rowColor">
-<td class="colFirst"><code>public&nbsp;mapping&nbsp;</code></td>
-<td class="colLast"><code><strong><a href="../../..//platform/.obj/tracker/domain.html#children">children</strong></code>
-<div class="block"></div>
-</td>
-</tr>
-<tr class="altColor">
-<td class="colFirst"><code>public&nbsp;mapping&nbsp;</code></td>
-<td class="colLast"><code><strong><a href="../../..//platform/.obj/tracker/domain.html#domain_roots">domain_roots</strong></code>
-<div class="block"></div>
-</td>
-</tr>
-<tr class="rowColor">
-<td class="colFirst"><code>public&nbsp;mapping&nbsp;</code></td>
-<td class="colLast"><code><strong><a href="../../..//platform/.obj/tracker/domain.html#domains">domains</strong></code>
-<div class="block"></div>
-</td>
-</tr>
-</table>
-
-</li>
-</ul>
 <!-- ========== METHOD SUMMARY =========== -->
 <ul class="blockList">
 <li class="blockList"><a name="method_summary">
@@ -127,16 +93,47 @@
 <th class="colFirst" scope="col">Modifier and Type</th>
 <th class="colLast" scope="col">Function and Description</th>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>public&nbsp;void&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../../platform/.obj/tracker/domain.html#create()">create</a></strong>()</code>
 <div class="block">Constructor.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>protected&nbsp;int&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../platform/.obj/tracker/domain.html#delete_domain()">delete_domain</a></strong>(struct DomainConfig&nbsp;config)</code>
+<div class="block">Delete a domain.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>protected&nbsp;string&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../platform/.obj/tracker/domain.html#get_domain_root()">get_domain_root</a></strong>(string&nbsp;domain_file)</code>
+<div class="block">For a specified domain file, return the root dir for that domain.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>protected&nbsp;string&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../platform/.obj/tracker/domain.html#get_parent_domain_file()">get_parent_domain_file</a></strong>(string&nbsp;domain_file)</code>
+<div class="block">For a specified domain file, return the parent domain file, or 0 if no
+parent domain exists.</div>
 </td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>public&nbsp;void&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../../platform/.obj/tracker/domain.html#parse_config()">parse_config</a></strong>(string&nbsp;domain_file)</code>
 <div class="block">Parse the configuration found by specified file and return it.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>protected&nbsp;void&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../platform/.obj/tracker/domain.html#parse_configure_access()">parse_configure_access</a></strong>(mixed *tag,&nbsp;mixed *read_checker,&nbsp;mixed *write_checker)</code>
+<div class="block">Parse the "configureAccess" configuration directive.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>protected&nbsp;void&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../platform/.obj/tracker/domain.html#parse_directive()">parse_directive</a></strong>(mixed *tag,&nbsp;struct DomainConfig&nbsp;config,&nbsp;mixed *read_checker,&nbsp;mixed *write_checker)</code>
+<div class="block">Parse a configuration directive.</div>
 </td>
 </tr>
 <tr class="rowColor">
@@ -169,6 +166,18 @@
 <div class="block">Resolve a sysinclude (<file> style include) for files in a domain.</div>
 </td>
 </tr>
+<tr class="altColor">
+<td class="colFirst"><code>public&nbsp;void&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../platform/.obj/tracker/domain.html#setup()">setup</a></strong>()</code>
+<div class="block">Setup the DomainTracker.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>protected&nbsp;int&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../platform/.obj/tracker/domain.html#update_domain()">update_domain</a></strong>(struct DomainConfig&nbsp;config)</code>
+<div class="block">Create a new domain or update an existing one.</div>
+</td>
+</tr>
 </table>
 <ul class="blockList">
 <li class="blockList"><a name="methods_inherited_from_class_/platform/.lib/file">
@@ -186,50 +195,25 @@
 <div class="details">
 <ul class="blockList">
 <li class="blockList">
-<!-- ============ FIELD DETAIL =========== -->
-<ul class="blockList">
-<li class="blockList"><a name="field_detail">
-<!--   -->
-</a>
-<h3>Variable Detail</h3>
-<a name="domains">
-<!--   -->
-</a>
-<ul class="blockListLast">
-<li class="blockList">
-<h4>domains</h4>
-<pre>public&nbsp;mapping&nbsp;domains</pre>
-<div class="block"></div>
-</li>
-</ul>
-<a name="children">
-<!--   -->
-</a>
-<ul class="blockListLast">
-<li class="blockList">
-<h4>children</h4>
-<pre>public&nbsp;mapping&nbsp;children</pre>
-<div class="block"></div>
-</li>
-</ul>
-<a name="domain_roots">
-<!--   -->
-</a>
-<ul class="blockListLast">
-<li class="blockList">
-<h4>domain_roots</h4>
-<pre>public&nbsp;mapping&nbsp;domain_roots</pre>
-<div class="block"></div>
-</li>
-</ul>
-</li>
-</ul>
 <!-- ============ METHOD DETAIL ========== -->
 <ul class="blockList">
 <li class="blockList"><a name="method_detail">
 <!--   -->
 </a>
 <h3>Function Detail</h3>
+<a name="setup()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setup</h4>
+<pre>public&nbsp;void&nbsp;setup()</pre>
+<div class="block">Setup the DomainTracker.</div>
+<dl>
+<dl>
+</dl>
+</li>
+</ul>
 <a name="reconfig_signal()">
 <!--   -->
 </a>
@@ -262,6 +246,106 @@
 </dl>
 </li>
 </ul>
+<a name="parse_directive()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>parse_directive</h4>
+<pre>protected&nbsp;void&nbsp;parse_directive(mixed *tag,&nbsp;struct DomainConfig&nbsp;config,&nbsp;mixed *read_checker,&nbsp;mixed *write_checker)</pre>
+<div class="block">Parse a configuration directive.</div>
+<dl>
+<dl>
+<dt><span class="strong">Parameters:</span></dt>
+<dd><code>tag</code> - the XML tag specifying the directive </dd>
+<dd><code>config</code> - the domain config being built </dd>
+<dd><code>read_checker</code> - a partial closure which will completed with read access logic </dd>
+<dd><code>write_checker</code> - a partial closure which will be completed with write access logic </dd>
+</dl>
+</li>
+</ul>
+<a name="parse_configure_access()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>parse_configure_access</h4>
+<pre>protected&nbsp;void&nbsp;parse_configure_access(mixed *tag,&nbsp;mixed *read_checker,&nbsp;mixed *write_checker)</pre>
+<div class="block">Parse the "configureAccess" configuration directive.</div>
+<dl>
+<dl>
+<dt><span class="strong">Parameters:</span></dt>
+<dd><code>tag</code> - the configureAccess tag </dd>
+<dd><code>read_checker</code> - a partial closure which will completed with read access logic </dd>
+<dd><code>write_checker</code> - a partial closure which will be completed with write access logic </dd>
+</dl>
+</li>
+</ul>
+<a name="get_parent_domain_file()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>get_parent_domain_file</h4>
+<pre>protected&nbsp;string&nbsp;get_parent_domain_file(string&nbsp;domain_file)</pre>
+<div class="block">For a specified domain file, return the parent domain file, or 0 if no
+parent domain exists.</div>
+<dl>
+<dl>
+<dt><span class="strong">Parameters:</span></dt>
+<dd><code>domain_file</code> - the child domain file </dd>
+<dt><span class="strong">Returns:</span></dt><dd>the parent domain file, or 0 </dd>
+</dl>
+</li>
+</ul>
+<a name="get_domain_root()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>get_domain_root</h4>
+<pre>protected&nbsp;string&nbsp;get_domain_root(string&nbsp;domain_file)</pre>
+<div class="block">For a specified domain file, return the root dir for that domain.</div>
+<dl>
+<dl>
+<dt><span class="strong">Parameters:</span></dt>
+<dd><code>domain_file</code> - the path to the domain file </dd>
+<dt><span class="strong">Returns:</span></dt><dd>the domain root </dd>
+</dl>
+</li>
+</ul>
+<a name="update_domain()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>update_domain</h4>
+<pre>protected&nbsp;int&nbsp;update_domain(struct DomainConfig&nbsp;config)</pre>
+<div class="block">Create a new domain or update an existing one.</div>
+<dl>
+<dl>
+<dt><span class="strong">Parameters:</span></dt>
+<dd><code>config</code> - the domain configuration to update </dd>
+<dt><span class="strong">Returns:</span></dt><dd>1 if confguration was successfully updated, otherwise 0 </dd>
+</dl>
+</li>
+</ul>
+<a name="delete_domain()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>delete_domain</h4>
+<pre>protected&nbsp;int&nbsp;delete_domain(struct DomainConfig&nbsp;config)</pre>
+<div class="block">Delete a domain.</div>
+<dl>
+<dl>
+<dt><span class="strong">Parameters:</span></dt>
+<dd><code>config</code> - the domain configuration to delete </dd>
+<dt><span class="strong">Returns:</span></dt><dd>1 if domain was successfully deleted, otherwise 0 </dd>
+</dl>
+</li>
+</ul>
 <a name="query_domain_id()">
 <!--   -->
 </a>
@@ -291,7 +375,7 @@ Will discover new domains from domain.xml files if necessary.</div>
 <dl>
 <dt><span class="strong">Parameters:</span></dt>
 <dd><code>domain_id</code> - the domain id to get </dd>
-<dt><span class="strong">Returns:</span></dt><dd>the DomainConfig of the specified id, or 0 if no domain was found </dd>
+<dt><span class="strong">Returns:</span></dt><dd>the DomainConfig of the specified id, or 0 if no domain was found @deprecated </dd>
 </dl>
 </li>
 </ul>
@@ -362,7 +446,7 @@ path instead.</div>
 </a><a href="#skip-navbar_bottom" title="Skip navigation links"></a><a name="navbar_">
 </a>
 <ul class="navList" title="Navigation">
-<div class="aboutLanguage"><em><strong>gabbo mudlib foundation<br/>version 0.1</strong></em></div>
+<div class="aboutLanguage"><em><strong>Acme MUD<br/>version 0.1</strong></em></div>
 </ul>
 </div>
 <div class="subNav">

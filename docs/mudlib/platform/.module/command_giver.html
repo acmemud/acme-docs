@@ -9,7 +9,7 @@
 </a><a href="#skip-navbar_top" title="Skip navigation links"></a><a name="navbar_">
 </a>
 <ul class="navList" title="Navigation">
-<div class="aboutLanguage"><em><strong>gabbo mudlib foundation<br/>version 0.1</strong></em></div>
+<div class="aboutLanguage"><em><strong>Acme MUD<br/>version 0.1</strong></em></div>
 </ul>
 </div>
 <div class="subNav">
@@ -63,10 +63,11 @@
 <dl>
 <dt>All Inherited Programs:</dt>
 <dd>
-<ul class="tree"><li><a href="../../platform/.lib/object.html" title="">ObjectLib </a>
-</li><li><a href="../../platform/.lib/file.html" title="">FileLib </a>
-</li><li><a href="../../platform/.lib/array.html" title="">ArrayLib </a>
-</li><li class="last"><a href="../../platform/.lib/command_spec.html" title="">CommandSpecLib </a>
+<ul class="tree"><li><a href="../../platform/.lib/object.html" title="">ObjectLib </a>&nbsp;[private]
+<ul class="tree"><li class="last"><a href="../../platform/.lib/access.html" title="">AccessLib </a>&nbsp;[private]
+</li></ul></li><li><a href="../../platform/.lib/file.html" title="">FileLib </a>&nbsp;[private]
+</li><li><a href="../../platform/.lib/array.html" title="">ArrayLib </a>&nbsp;[private]
+</li><li class="last"><a href="../../platform/.lib/command_spec.html" title="">CommandSpecLib </a>&nbsp;[private]
 <ul class="tree"><li class="last"><a href="../../platform/.lib/file.html" title="">FileLib </a>
 </li></ul></li></ul></dd>
 </dl>
@@ -98,15 +99,14 @@
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>public&nbsp;int&nbsp;</code></td>
-<td class="colLast"><code><strong><a href="../../platform/.module/command_giver.html#check_command_access()">check_command_access</a></strong>(object&nbsp;cmd_ob,&nbsp;int&nbsp;read)</code>
-<div class="block">Test whether a given command object should be allowed this command giver's
-read/write access.</div>
+<td class="colLast"><code><strong><a href="../../platform/.module/command_giver.html#do_command()">do_command</a></strong>(string&nbsp;arg)</code>
+<div class="block">Main command router invoked by HookService.</div>
 </td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>public&nbsp;int&nbsp;</code></td>
-<td class="colLast"><code><strong><a href="../../platform/.module/command_giver.html#do_command()">do_command</a></strong>(string&nbsp;arg)</code>
-<div class="block">Main command router invoked by HookService.</div>
+<td class="colLast"><code><strong><a href="../../platform/.module/command_giver.html#is_command_giver()">is_command_giver</a></strong>()</code>
+<div class="block">Return true to indicate this object is a command giver.</div>
 </td>
 </tr>
 <tr class="rowColor">
@@ -117,7 +117,7 @@ load the configured command specs from disk.</div>
 </td>
 </tr>
 <tr class="altColor">
-<td class="colFirst"><code>public&nbsp;object&nbsp;</code></td>
+<td class="colFirst"><code>protected&nbsp;object&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../platform/.module/command_giver.html#load_controller()">load_controller</a></strong>(string&nbsp;controller)</code>
 <div class="block">Attempt to load a command controller object.</div>
 </td>
@@ -129,9 +129,15 @@ load the configured command specs from disk.</div>
 </td>
 </tr>
 <tr class="altColor">
-<td class="colFirst"><code>protected&nbsp;void&nbsp;</code></td>
+<td class="colFirst"><code>public&nbsp;void&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../platform/.module/command_giver.html#setup()">setup</a></strong>()</code>
 <div class="block">Setup the CommandGiverMixin.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>public&nbsp;void&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../platform/.module/command_giver.html#teardown()">teardown</a></strong>()</code>
+<div class="block">Tear down the CommandGiverMixin.</div>
 </td>
 </tr>
 </table>
@@ -140,6 +146,13 @@ load the configured command specs from disk.</div>
 </a>
 <h3>Functions inherited from program&nbsp;<a href="../../platform/.lib/object.html" title="program /platform/.lib/object">ObjectLib </a></h3>
 <code><a href="../../platform/.lib/object.html#get_path_info()">get_path_info</a>, <a href="../../platform/.lib/object.html#is_reachable()">is_reachable</a>, <a href="../../platform/.lib/object.html#reload_object()">reload_object</a></code></li>
+
+</ul>
+<ul class="blockList">
+<li class="blockList"><a name="methods_inherited_from_class_/platform/.lib/access">
+</a>
+<h3>Functions inherited from program&nbsp;<a href="../../platform/.lib/access.html" title="program /platform/.lib/access">AccessLib </a></h3>
+<code><a href="../../platform/.lib/access.html#get_create_uid()">get_create_uid</a>, <a href="../../platform/.lib/access.html#get_user()">get_user</a></code></li>
 
 </ul>
 <ul class="blockList">
@@ -184,28 +197,37 @@ load the configured command specs from disk.</div>
 <ul class="blockList">
 <li class="blockList">
 <h4>setup</h4>
-<pre>protected&nbsp;void&nbsp;setup()</pre>
+<pre>public&nbsp;void&nbsp;setup()</pre>
 <div class="block">Setup the CommandGiverMixin.</div>
 <dl>
 <dl>
 </dl>
 </li>
 </ul>
-<a name="check_command_access()">
+<a name="teardown()">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
-<h4>check_command_access</h4>
-<pre>public&nbsp;int&nbsp;check_command_access(object&nbsp;cmd_ob,&nbsp;int&nbsp;read)</pre>
-<div class="block">Test whether a given command object should be allowed this command giver's
-read/write access.</div>
+<h4>teardown</h4>
+<pre>public&nbsp;void&nbsp;teardown()</pre>
+<div class="block">Tear down the CommandGiverMixin.</div>
 <dl>
 <dl>
-<dt><span class="strong">Parameters:</span></dt>
-<dd><code>cmd_ob</code> - the command object being executed </dd>
-<dd><code>read</code> - non-zero if only read access is being granted </dd>
-<dt><span class="strong">Returns:</span></dt><dd>non-zero if access should be granted </dd>
+</dl>
+</li>
+</ul>
+<a name="is_command_giver()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>is_command_giver</h4>
+<pre>public&nbsp;int&nbsp;is_command_giver()</pre>
+<div class="block">Return true to indicate this object is a command giver.</div>
+<dl>
+<dl>
+<dt><span class="strong">Returns:</span></dt><dd>1 to indicate object is a command giver </dd>
 </dl>
 </li>
 </ul>
@@ -265,7 +287,7 @@ controller for validation and execution.</div>
 <ul class="blockList">
 <li class="blockList">
 <h4>load_controller</h4>
-<pre>public&nbsp;object&nbsp;load_controller(string&nbsp;controller)</pre>
+<pre>protected&nbsp;object&nbsp;load_controller(string&nbsp;controller)</pre>
 <div class="block">Attempt to load a command controller object.</div>
 <dl>
 <dl>
@@ -290,7 +312,7 @@ controller for validation and execution.</div>
 </a><a href="#skip-navbar_bottom" title="Skip navigation links"></a><a name="navbar_">
 </a>
 <ul class="navList" title="Navigation">
-<div class="aboutLanguage"><em><strong>gabbo mudlib foundation<br/>version 0.1</strong></em></div>
+<div class="aboutLanguage"><em><strong>Acme MUD<br/>version 0.1</strong></em></div>
 </ul>
 </div>
 <div class="subNav">

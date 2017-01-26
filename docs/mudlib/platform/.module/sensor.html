@@ -9,7 +9,7 @@
 </a><a href="#skip-navbar_top" title="Skip navigation links"></a><a name="navbar_">
 </a>
 <ul class="navList" title="Navigation">
-<div class="aboutLanguage"><em><strong>gabbo mudlib foundation<br/>version 0.1</strong></em></div>
+<div class="aboutLanguage"><em><strong>Acme MUD<br/>version 0.1</strong></em></div>
 </ul>
 </div>
 <div class="subNav">
@@ -63,10 +63,12 @@
 <dl>
 <dt>All Inherited Programs:</dt>
 <dd>
-<ul class="tree"><li><a href="../../platform/.lib/json.html" title="">JSONLib </a>
-</li><li><a href="../../platform/.lib/message.html" title="">MessageLib </a>
-</li><li class="last"><a href="../../platform/.lib/object.html" title="">ObjectLib </a>
-</li></ul></dd>
+<ul class="tree"><li><a href="../../platform/.lib/json.html" title="">JSONLib </a>&nbsp;[private]
+</li><li><a href="../../platform/.lib/message.html" title="">MessageLib </a>&nbsp;[private]
+<ul class="tree"><li class="last"><a href="../../platform/.lib/prompt.html" title="">PromptLib </a>&nbsp;[private]
+</li></ul></li><li class="last"><a href="../../platform/.lib/object.html" title="">ObjectLib </a>&nbsp;[private]
+<ul class="tree"><li class="last"><a href="../../platform/.lib/access.html" title="">AccessLib </a>&nbsp;[private]
+</li></ul></li></ul></dd>
 </dl>
 <hr>
 <br>
@@ -96,6 +98,12 @@ output or messages an object may receive are simply regarded as noise.</div>
 <th class="colFirst" scope="col">Modifier and Type</th>
 <th class="colLast" scope="col">Function and Description</th>
 </tr>
+<tr class="rowColor">
+<td class="colFirst"><code>public&nbsp;int&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../platform/.module/sensor.html#is_sensor()">is_sensor</a></strong>()</code>
+<div class="block">Return true to indicate this object is a sensor.</div>
+</td>
+</tr>
 <tr class="altColor">
 <td class="colFirst"><code>public&nbsp;void&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../platform/.module/sensor.html#on_message()">on_message</a></strong>(struct Message&nbsp;msg)</code>
@@ -116,12 +124,18 @@ and delivered.</div>
 </td>
 </tr>
 <tr class="rowColor">
-<td class="colFirst"><code>protected&nbsp;void&nbsp;</code></td>
+<td class="colFirst"><code>public&nbsp;void&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../platform/.module/sensor.html#setup()">setup</a></strong>()</code>
 <div class="block">Setup the SensorMixin.</div>
 </td>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><code>public&nbsp;void&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../platform/.module/sensor.html#teardown()">teardown</a></strong>()</code>
+<div class="block">Tear down the SensorMixin.</div>
+</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>public&nbsp;mixed&nbsp;*</code></td>
 <td class="colLast"><code><strong><a href="../../platform/.module/sensor.html#try_message()">try_message</a></strong>(string&nbsp;topic,&nbsp;string&nbsp;message,&nbsp;mapping&nbsp;context,&nbsp;object&nbsp;sender)</code>
 <div class="block">Invoked by PostalService before a message is sent to prevent or otherwise
@@ -140,7 +154,14 @@ prepare the message for delivery.</div>
 <li class="blockList"><a name="methods_inherited_from_class_/platform/.lib/message">
 </a>
 <h3>Functions inherited from program&nbsp;<a href="../../platform/.lib/message.html" title="program /platform/.lib/message">MessageLib </a></h3>
-<code><a href="../../platform/.lib/message.html#prompt_msg()">prompt_msg</a>, <a href="../../platform/.lib/message.html#send_msg()">send_msg</a>, <a href="../../platform/.lib/message.html#send_prompt()">send_prompt</a>, <a href="../../platform/.lib/message.html#stderr_msg()">stderr_msg</a>, <a href="../../platform/.lib/message.html#stdout_msg()">stdout_msg</a></code></li>
+<code><a href="../../platform/.lib/message.html#send_msg()">send_msg</a>, <a href="../../platform/.lib/message.html#send_newline()">send_newline</a>, <a href="../../platform/.lib/message.html#send_prompt()">send_prompt</a>, <a href="../../platform/.lib/message.html#stderr_msg()">stderr_msg</a>, <a href="../../platform/.lib/message.html#stdout_msg()">stdout_msg</a></code></li>
+
+</ul>
+<ul class="blockList">
+<li class="blockList"><a name="methods_inherited_from_class_/platform/.lib/prompt">
+</a>
+<h3>Functions inherited from program&nbsp;<a href="../../platform/.lib/prompt.html" title="program /platform/.lib/prompt">PromptLib </a></h3>
+<code><a href="../../platform/.lib/prompt.html#command_prompt()">command_prompt</a>, <a href="../../platform/.lib/prompt.html#input_prompt()">input_prompt</a>, <a href="../../platform/.lib/prompt.html#prompt()">prompt</a>, <a href="../../platform/.lib/prompt.html#prompt_info()">prompt_info</a>, <a href="../../platform/.lib/prompt.html#prompt_input()">prompt_input</a></code></li>
 
 </ul>
 <ul class="blockList">
@@ -148,6 +169,13 @@ prepare the message for delivery.</div>
 </a>
 <h3>Functions inherited from program&nbsp;<a href="../../platform/.lib/object.html" title="program /platform/.lib/object">ObjectLib </a></h3>
 <code><a href="../../platform/.lib/object.html#get_path_info()">get_path_info</a>, <a href="../../platform/.lib/object.html#is_reachable()">is_reachable</a>, <a href="../../platform/.lib/object.html#reload_object()">reload_object</a></code></li>
+
+</ul>
+<ul class="blockList">
+<li class="blockList"><a name="methods_inherited_from_class_/platform/.lib/access">
+</a>
+<h3>Functions inherited from program&nbsp;<a href="../../platform/.lib/access.html" title="program /platform/.lib/access">AccessLib </a></h3>
+<code><a href="../../platform/.lib/access.html#get_create_uid()">get_create_uid</a>, <a href="../../platform/.lib/access.html#get_user()">get_user</a></code></li>
 
 </ul>
 
@@ -165,19 +193,43 @@ prepare the message for delivery.</div>
 <!--   -->
 </a>
 <h3>Function Detail</h3>
-<a name="on_message()">
+<a name="setup()">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
-<h4>on_message</h4>
-<pre>public&nbsp;void&nbsp;on_message(struct Message&nbsp;msg)</pre>
-<div class="block">This function is invoked by PostalService after a message has been rendered
-and delivered.</div>
+<h4>setup</h4>
+<pre>public&nbsp;void&nbsp;setup()</pre>
+<div class="block">Setup the SensorMixin.</div>
 <dl>
 <dl>
-<dt><span class="strong">Parameters:</span></dt>
-<dd><code>msg</code> - the rendered message </dd>
+</dl>
+</li>
+</ul>
+<a name="teardown()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>teardown</h4>
+<pre>public&nbsp;void&nbsp;teardown()</pre>
+<div class="block">Tear down the SensorMixin.</div>
+<dl>
+<dl>
+</dl>
+</li>
+</ul>
+<a name="is_sensor()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>is_sensor</h4>
+<pre>public&nbsp;int&nbsp;is_sensor()</pre>
+<div class="block">Return true to indicate this object is a sensor.</div>
+<dl>
+<dl>
+<dt><span class="strong">Returns:</span></dt><dd>1 </dd>
 </dl>
 </li>
 </ul>
@@ -194,19 +246,6 @@ info instead.</div>
 <dl>
 <dl>
 <dt><span class="strong">Returns:</span></dt><dd>the default terminal type </dd>
-</dl>
-</li>
-</ul>
-<a name="setup()">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>setup</h4>
-<pre>protected&nbsp;void&nbsp;setup()</pre>
-<div class="block">Setup the SensorMixin.</div>
-<dl>
-<dl>
 </dl>
 </li>
 </ul>
@@ -251,6 +290,22 @@ object based on topic and terminal type of this sensor.</div>
 </dl>
 </li>
 </ul>
+<a name="on_message()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>on_message</h4>
+<pre>public&nbsp;void&nbsp;on_message(struct Message&nbsp;msg)</pre>
+<div class="block">This function is invoked by PostalService after a message has been rendered
+and delivered.</div>
+<dl>
+<dl>
+<dt><span class="strong">Parameters:</span></dt>
+<dd><code>msg</code> - the rendered message </dd>
+</dl>
+</li>
+</ul>
 </li>
 </ul>
 </li>
@@ -266,7 +321,7 @@ object based on topic and terminal type of this sensor.</div>
 </a><a href="#skip-navbar_bottom" title="Skip navigation links"></a><a name="navbar_">
 </a>
 <ul class="navList" title="Navigation">
-<div class="aboutLanguage"><em><strong>gabbo mudlib foundation<br/>version 0.1</strong></em></div>
+<div class="aboutLanguage"><em><strong>Acme MUD<br/>version 0.1</strong></em></div>
 </ul>
 </div>
 <div class="subNav">
